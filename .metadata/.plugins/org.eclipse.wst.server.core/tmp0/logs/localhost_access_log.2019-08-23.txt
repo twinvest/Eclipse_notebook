@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:02:04:03 +0900] "GET /TestWeb/main.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:02:04:03 +0900] "GET /TestWeb/login.jsp HTTP/1.1" 200 2440
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:02:04:03 +0900] "GET /TestWeb/css/bootstrap.min.css HTTP/1.1" 200 121200
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:02:04:03 +0900] "GET /TestWeb/js/bootstrap.js HTTP/1.1" 200 69707
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:02:04:07 +0900] "POST /TestWeb/loginAction.jsp HTTP/1.1" 200 515
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:02:04:08 +0900] "GET /TestWeb/main.jsp HTTP/1.1" 200 1849
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:02:04:08 +0900] "GET /TestWeb/image/king.jpg HTTP/1.1" 200 953890

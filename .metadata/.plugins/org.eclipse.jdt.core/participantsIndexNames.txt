@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\rlaxo\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2926312857.index
+\Test\src
+C:\Users\rlaxo\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2465819585.index
+\TestWeb\src
+C:\Users\rlaxo\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2261736122.index
+\TestWeb\src
