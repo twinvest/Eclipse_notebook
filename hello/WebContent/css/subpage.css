@@ -1,0 +1,104 @@
+#pl_section{
+	height:200px;
+	background:ivory;
+	
+}
+
+
+#guk > li{
+	margin-left:50px;
+	font-size:11px;
+}
+
+
+#event > img{
+	margin-left:5px;
+	width:140px;
+	height:160px;
+}
+
+
+#event > a > img{
+	margin-left:5px;
+	width:140px;
+	height:160px;
+}
+
+#event > h3{
+	 font-family:'¸¼Àº°íµñ'
+}
+
+
+ 
+/* sub_goods */
+#sub_goods{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#sub_goods > article.sub_goods_article {
+	margin-bottom: 10px;
+	padding: 20px;
+	border: 1px solid black;
+
+}
+
+
+#bookInfo1 {
+	width: 760px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#bookInfo1 > #bookImg {
+	width: 260px;
+	float: left;	
+}
+
+#bookInfo1 > #bookInformation {
+	width: 500px;
+	float: right;
+
+}
+
+
+td.big {
+	padding:20px;
+}
+
+#bookHeader{
+	border-collapse: sparate;
+	border-spacing: 10px;
+}
+
+td.header {
+	width: 60px; 
+	background-color: lightyellow;
+}
+
+
+
+#bookInformation > ul {overflow:hidden;}
+#bookInformation > ul > li {float:left; padding:10px;}
+#bookInformation > ul > li > a{
+	display:block;
+	padding: 10px 20px;
+	background-color:lightyellow;
+	border: 1px solid black;
+	color: black;
+}
+#bookInformation > ul > li > a:hover {
+	background:gray;
+	color:white;
+}
+
+#bookInformation > ul > li > a { border-radius: 10px 10px 10px 10px;}
+
+
+ 
+ 		
+
+
+ 
+

@@ -1,0 +1,409 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Helvetica', sans-serif;
+	width: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+}
+
+#main_left {
+	width: 960px;
+	margin: 0 auto;
+	height: 160px;
+	position: relative;
+}
+
+#main_left>#main_menu {
+	position: absolute;
+	left: 20px;
+}
+
+#top_gnb {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+#top_gnb>div {
+	display: table-cell;
+	position: relative;
+}
+
+#top_gnb>div>a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+}
+
+#top_gnb>div>a::before {
+	display: black;
+	position: absolute;
+	top: 9px;
+	left: -1px;
+	width: 1px;
+	height: 15px;
+	border-left: 1px solid black;
+	content: '';
+}
+
+/* 헤더 */
+#main_header {
+	width: 960px;
+	margin: 0 auto;
+	height: 160px;
+	position: relative;
+}
+
+#main_header>#title {
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	font-family: "휴먼옛체";
+	color: green;
+}
+
+#main_header>#main_gnb {
+	position: absolute;
+	right: 0;
+	top: 0;
+	fint-size: 9px;
+}
+
+#main_header>#main_lnb {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+
+#content {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#content>#main_section {
+	width: 750px;
+	float: Left;
+}
+
+/* 위쪽 메뉴 설정 */
+#topMenu {
+	text-align: right;
+	font-family: '맑은고딕';
+	width: 1040px;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+	background: #ffffff;
+	padding: 5px;
+}
+
+#topMenu li {
+	margin-right: 10px;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+
+#topMenu img {
+	display: block;
+}
+
+#topMenu a {
+	margin: 0 8px 4px 8px;
+	text-decoration: none;
+	font-size: 12px;
+	color: #003399;
+	font-weight: bold;
+}
+
+#top_gnb {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+#top_gnb>div {
+	display: table-cell;
+	position: relative;
+}
+
+#top_gnb>div>a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+}
+
+#top_gnb>div>a::before {
+	display: blck;
+	position: absolute;
+	top: 9px;
+	left: -1px;
+	width: 1px;
+	height: 15px;
+	border-left: 1px solid black;
+	content: '';
+}
+
+#bottom_gnb {
+	overflow: hidden;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background: #B42111;
+}
+
+#bottom_gnb>div>label, #bottom_gnb>div>a {
+	float: left;
+	width: 25%;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: white;
+}
+
+#main_top {
+	
+}
+
+#main_top>img {
+	margin-left: 1000px;
+}
+
+#main_top>input {
+	align: right;
+}
+
+#top1 {
+	left: 50px;
+}
+
+#top1>img {
+	margin-left: 50px;
+}
+
+#main_header {
+	height: 45px;
+	position: relative;
+	text-align: center;
+	line-height: 45px;
+}
+
+#main_header>h1 {
+	color: black;
+}
+
+#main_footer {
+	width: 1250px;
+	color: white;
+	background: black;
+	font-family: '상상토끼 꽃길';
+	padding: 15px;
+	border-top: 2px solid black;
+	text-align: left;
+	margin: auto;
+}
+
+#main_footer>address {
+	margin-left: 80px;
+	font-size: 10px;
+}
+
+#main_footer>h1 {
+	margin-left: 80px;
+	font-family: '상상토끼 꽃길';
+}
+
+#main_footer>p {
+	text-align: center;
+	font-size: 12px;
+	color: gray;
+}
+
+#topMenu a:hover {
+	color: black;
+	text-shadow: 2px 2px 2px green;
+} /*  텍스트 링크위로 마우스 오버했을 경우 , 글자색 변경 */
+#bar {
+	width: 0;
+	background-color: black;
+	border: 1px solid black;
+}
+
+#jb-container {
+	width: 1028px;
+	margin: 0px auto;
+	padding: 20px;
+	position: bottom;
+}
+
+#jb-header {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#jb-top {
+	padding: 5px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#jb-sidebar-left {
+	width: 140px;
+	padding: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+#jb-content {
+	width: 630px;
+	padding: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+#jb-sidebar-right {
+	width: 120px;
+	padding: 10px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+#jb-footer {
+	clear: both;
+	padding: 20px;
+}
+
+@media screen and (max-width:470px) {
+	#jb-container {
+		width: auto;
+	}
+	#jb-sidebar-left {
+		float: none;
+		width: auto;
+	}
+	#jb-content {
+		float: none;
+		width: auto;
+	}
+	#jb-sidebar-right {
+		float: none;
+		width: auto;
+	}
+}
+
+.scrollup {
+	position: fixed; /* 위치 고정 */
+	float: right; /* 오른쪽에서 */
+	height: 32px; /* 높이 32픽셀 */
+	right: 10px; /* 오른쪽에서 10픽셀 */
+	bottom: 10px; /* 아래에서 10픽셀 */
+	opacity: 0.7; /* 투명도이며 최고값은 1 */
+}
+
+form div.dynamiclabel {
+	/* div container for each form field with pop up label */
+	display: block;
+	margin: 30px;
+	font: 16px;
+	position: relative;
+}
+
+form div.dynamiclabel input[type="text"], form div.dynamiclabel textarea
+	{
+	width: 320px;
+	padding: 10px;
+	border: 1px solid #c3c3c3;
+	border-radius: 7px;
+}
+
+form div.dynamiclabel input[type="password"], form div.dynamiclabel textarea
+	{
+	width: 320px;
+	padding: 10px;
+	border: 1px solid #c3c3c3;
+	border-radius: 7px;
+}
+
+form div.dynamiclabel input[type="submit"], form div.dynamiclabel textarea
+	{
+	width: 320px;
+	padding: 10px;
+	border: 1px solid #c3c3c3;
+	border-radius: 7px;
+}
+
+form div.dynamiclabel input[type="reset"], form div.dynamiclabel textarea
+	{
+	width: 320px;
+	padding: 10px;
+	border: 1px solid #c3c3c3;
+	border-radius: 7px;
+}
+
+form div.dynamiclabel textarea {
+	height: 200px;
+}
+
+form div.dynamiclabel label { /* pop up label style */
+	position: absolute;
+	left: 0;
+	background: lightyellow;
+	border: 1px solid yellow;
+	border-radius: 2px;
+	padding: 3px 10px;
+	box-shadow: 4px 1px 5px gray;
+	font-weight: bold;
+	-webkit-backface-visibility: hidden;
+	top: 10px;
+	/* initial top position of label relative to dynamiclabel container */
+	-moz-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-transition: all 0.4s ease-in-out;
+	/* Safari doesn't seem to support cubic-bezier values beyond 0 to 1, so use keyword value instead */
+	-o-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	opacity: 0;
+	z-index: -1;
+}
+
+form div.dynamiclabel>*:focus {
+	/* when user focuses on child element inside div.dynamiclabel */
+	border: 1px solid #45bcd2;
+	box-shadow: 0 0 8px 2px #98d865;
+}
+
+form div.dynamiclabel>*:focus+label {
+	/* label style when user focuses on child element inside div.dynamiclabel */
+	opacity: 1;
+	z-index: 100;
+	top: -35px;
+	/* Post top position of label on focus relative to dynamiclabel container */
+	-ms-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+
+#help {
+	text-align: right;
+	width: 100%;
+}
