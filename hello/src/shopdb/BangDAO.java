@@ -14,7 +14,7 @@ public class BangDAO
     private static final String JDBC_DRIVER = "org.gjt.mm.mysql.Driver";
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=euckr";
     private static final String USER = "root";
-    private static final String PASSWD = "de52ch1683";
+    private static final String PASSWD = "gksdideo1!";
     private Connection con;
     private PreparedStatement pstmt;
     private ResultSet rs;
@@ -33,7 +33,7 @@ public class BangDAO
     
     public void connect() {
         try {
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=euckr", "root", "de52ch1683");
+            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=euckr", "root", "gksdideo1!");
         }
         catch (Exception e) {
             e.printStackTrace();

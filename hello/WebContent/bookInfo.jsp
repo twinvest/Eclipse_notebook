@@ -55,7 +55,7 @@ $("#main_aside li a.menu01").click(function(){
 			String name = (String) obj_name;
 			String id = (String) obj_id;
 
-			String IMGPATH = "img/book";
+			String IMGPATH = "img/book/";
 			String isbn = request.getParameter("isbn");
 
 			ControlDAO dao = new ControlDAO();

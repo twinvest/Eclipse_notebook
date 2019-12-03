@@ -20,13 +20,17 @@
 		ControlDAO dao = new ControlDAO();
 		boolean success = dao.insertCart(user, isbn, quantity);
 
-		if (success) {
+		if (success) 
+		{
 	%>
 	<script>
-				if(confirm("장바구니에 추가되었습니다.\n장바구니를 확인 하시겠습니까?")){
-					location.href="myCart.jsp?user=<%=user%>
-		";
-		} else {
+		var result = confirm("장바구니에 추가되었습니다.\n장바구니를 확인 하시겠습니까?")
+		if(result)
+		{
+			location.href="myCart.jsp?user=<%=user%>";
+		}
+		else 
+		{
 			history.go(-1);
 		}
 	</script>

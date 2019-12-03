@@ -10,12 +10,13 @@ import java.sql.Connection;
 public class MemberDAO
 {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=euckr";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/shopdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; // localhost:3306 포트는 컴퓨터설치된 mysql주소
     private String USER;
-    private static final String PASSWD = "de52ch1683";
+    private static final String PASSWD = "gksdideo1!";
     private Connection con;
     private PreparedStatement pstmt;
     
+   
     public MemberDAO() {
         this.USER = "root";
         this.con = null;
@@ -30,7 +31,7 @@ public class MemberDAO
     
     public void connect() {
         try {
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=euckr", this.USER, "de52ch1683");
+            this.con = DriverManager.getConnection(JDBC_URL, USER, PASSWD);
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -52,11 +53,16 @@ public class MemberDAO
     }
     
     public boolean insertDB(final MemberEntity member) {
-        boolean success = false;
+        
+    	boolean success = false;
         this.connect();
-        final String sql = "insert into Member(id, passwd, name, jnum, cnum, anum) values(?, ?, ?, ?, ?, ? )";
+        if(con == null)
+    		System.out.println("con이 널!");
+        //System.out.println("성공!!");
+        final String sql = "insert into mem(id, passwd, name, jnum, cnum, anum) values(?, ?, ?, ?, ?, ? )";
         try {
-            (this.pstmt = this.con.prepareStatement(sql)).setString(1, member.getId());
+        	pstmt = con.prepareStatement(sql);
+            this.pstmt.setString(1, member.getId());
             this.pstmt.setString(2, member.getPasswd());
             this.pstmt.setString(3, member.getName());
             this.pstmt.setString(4, member.getJnum());
@@ -81,7 +87,7 @@ public class MemberDAO
     public boolean isPasswd(final String id, final String passwd) {
         boolean success = false;
         this.connect();
-        final String sql = "select passwd from Member where id=?";
+        final String sql = "select passwd from Mem where id=?";
         try {
             (this.pstmt = this.con.prepareStatement(sql)).setString(1, id);
             final ResultSet rs = this.pstmt.executeQuery();
@@ -105,7 +111,7 @@ public class MemberDAO
     
     public MemberEntity getMember(final String id) {
         this.connect();
-        final String SQL = "select * from Member where id = ?";
+        final String SQL = "select * from Mem where id = ?";
         final MemberEntity member = new MemberEntity();
         try {
             (this.pstmt = this.con.prepareStatement(SQL)).setString(1, id);

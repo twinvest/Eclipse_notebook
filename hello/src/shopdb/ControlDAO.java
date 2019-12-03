@@ -11,10 +11,10 @@ import java.sql.Connection;
 
 public class ControlDAO
 {
-    private static final String JDBC_DRIVER = "org.gjt.mm.mysql.Driver";
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=euckr";
-    private static final String USER = "root";
-    private static final String PASSWD = "de52ch1683";
+	private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/shopdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; // localhost:3306 포트는 컴퓨터설치된 mysql주소
+    private String USER;
+    private static final String PASSWD = "gksdideo1!";
     private Connection con;
     private PreparedStatement pstmt;
     private ResultSet rs;
@@ -24,7 +24,7 @@ public class ControlDAO
         this.pstmt = null;
         this.rs = null;
         try {
-            Class.forName("org.gjt.mm.mysql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -33,7 +33,7 @@ public class ControlDAO
     
     public void connect() {
         try {
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=euckr", "root", "de52ch1683");
+        	this.con = DriverManager.getConnection(JDBC_URL, "root", PASSWD);
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -89,7 +89,7 @@ public class ControlDAO
     public ArrayList<BookEntity> getBookList(final String CATEGORY, final int startRecord, final int pageRecordNo) {
         this.connect();
         final ArrayList<BookEntity> list = new ArrayList<BookEntity>();
-        final String sql = "select * from Book where Category = ? order by regdate desc limit ? , ? ";
+        final String sql = "select * from book where Category = ? order by regdate desc limit ? , ? ";
         System.out.println(sql);
         try {
             (this.pstmt = this.con.prepareStatement(sql)).setString(1, CATEGORY);
@@ -197,7 +197,7 @@ public class ControlDAO
     
     public MemberEntity getMember(final String id) {
         this.connect();
-        final String SQL = "select * from Member where id = ?";
+        final String SQL = "select * from Mem where id = ?";
         final MemberEntity member = new MemberEntity();
         try {
             (this.pstmt = this.con.prepareStatement(SQL)).setString(1, id);
@@ -220,7 +220,7 @@ public class ControlDAO
     public int getOrderNum() {
         int num = 0;
         this.connect();
-        final String sql = "select max(num) as tnum from `Order`";
+        final String sql = "select max(num) as tnum from ordering";
         try {
             this.pstmt = this.con.prepareStatement(sql);
             this.rs = this.pstmt.executeQuery();
@@ -242,7 +242,7 @@ public class ControlDAO
     public boolean insertOrderinfo(final int num, final String orderer, final String isbn, final Date date, final int quantity) {
         boolean success = false;
         this.connect();
-        final String sql = "insert into `Order` values (?, ?, ?, ?, ?)";
+        final String sql = "insert into ordering values (?, ?, ?, ?, ?)";
         try {
             (this.pstmt = this.con.prepareStatement(sql)).setInt(1, num);
             this.pstmt.setString(2, orderer);
@@ -267,7 +267,7 @@ public class ControlDAO
     
     public ArrayList<OrderBookEntity> getOrderList(final String orderer) {
         this.connect();
-        final String SQL = "select date(buydate) as buydate, num, B.title, sum(B.price *A.quantity) as total, count(*) as cnt  from `Order` A, Book B where orderer=? and  date(buydate)  >= date(subdate(now(), interval 3 month)) and A.isbn = B.isbn group by num order by num desc ";
+        final String SQL = "select date(buydate) as buydate, num, B.title, sum(B.price *A.quantity) as total, count(*) as cnt  from ordering A, Book B where orderer=? and  date(buydate)  >= date(subdate(now(), interval 3 month)) and A.isbn = B.isbn group by num order by num desc ";
         final ArrayList<OrderBookEntity> list = new ArrayList<OrderBookEntity>();
         try {
             (this.pstmt = this.con.prepareStatement(SQL)).setString(1, orderer);
