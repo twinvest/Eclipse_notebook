@@ -10,9 +10,12 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\rlaxo\eclipse-workspace\Test - 복사본"/>
+			<item value="C:\Users\rlaxo\OneDrive\바탕 화면\Model2-Sign"/>
 			<item value="C:\Users\rlaxo\eclipse-workspace\Test"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\rlaxo\eclipse-workspace\Test\WebContent\login.jsp"/>
 			<item value=""/>
 		</list>
 	</section>

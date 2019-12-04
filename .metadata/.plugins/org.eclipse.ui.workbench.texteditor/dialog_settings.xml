@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="게시판"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
-		<item key="isRegEx" value="false"/>
+		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="게시판"/>
+			<item value="^\R"/>
+			<item value="board"/>
+			<item value="png"/>
+			<item value="connect"/>
+			<item value="lotte"/>
+			<item value="main"/>
+			<item value=".png"/>
+			<item value="login"/>
+			<item value=","/>
+			<item value="jpg"/>
+			<item value=".jpg"/>
 			<item value="update set"/>
 			<item value="update"/>
 			<item value="&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=EUC-KR&quot;"/>
-			<item value="where category = ?"/>
-			<item value="de"/>
-			<item value="dao"/>
-			<item value="con이"/>
-			<item value="con"/>
-			<item value="pstmt"/>
-			<item value="getconnec"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1414"/>
-		<item key="DIALOG_Y_ORIGIN" value="414"/>
+		<item key="DIALOG_X_ORIGIN" value="559"/>
+		<item key="DIALOG_Y_ORIGIN" value="112"/>
 		<item key="DIALOG_WIDTH" value="340"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

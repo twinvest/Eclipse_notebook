@@ -2,4 +2,5 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:Test"/>
   <module moduleId="org.eclipse.jst.jee.server:TestWeb" serverId="Tomcat v7.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:Test - 복사본" serverId="Tomcat v7.0 Server at localhost"/>
 </modules>
