@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="950.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.sist.joba.main.controller.CompleteController">
+   <children>
+      <VBox layoutX="159.0" layoutY="29.0" prefHeight="950.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0" text="주문 완료">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0" text="주문 번호">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="txOrderNum" fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0" text="매장 : ">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="txStoreName" fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0" text="매장 번호 : ">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="txStoreCellPhone" fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Text fill="#a13901" strokeType="OUTSIDE" strokeWidth="0.0" text="이용해 주셔서 감사합니다.">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnHome" mnemonicParsing="false" style="-fx-background-color: pink; -fx-border-color: gray;" text="HOME">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

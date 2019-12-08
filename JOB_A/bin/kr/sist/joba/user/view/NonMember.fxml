@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.sist.joba.user.controller.NonMemController">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="400.0">
+         <children>
+            <Button fx:id="btnNBackStart" mnemonicParsing="false" text="&lt;back">
+               <HBox.margin>
+                  <Insets left="10.0" right="265.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnNSignUp" mnemonicParsing="false" text="Sign Up">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="100.0" prefHeight="600.0" prefWidth="200.0">
+         <children>
+            <TextField prefHeight="25.0" prefWidth="200.0" promptText="이름을 입력하세요">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="210.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField prefHeight="25.0" prefWidth="200.0" promptText="시/도/구를 입력하세요 ex) 서울시 강남구">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField prefHeight="25.0" prefWidth="200.0" promptText="나머지 주소를 입력하세요 ex) 테헤란로1번길 10">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField prefHeight="25.0" prefWidth="200.0" promptText="'-' 없이 휴대폰 번호를 입력하세요">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="btnToStoreInfo" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="OK">
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

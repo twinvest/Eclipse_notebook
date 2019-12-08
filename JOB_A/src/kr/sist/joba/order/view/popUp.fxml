@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:controller="kr.sist.joba.order.controller.OrderController" prefHeight="200.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <children>
+      <Text layoutX="188.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="죄송합니다. \n 저희 매장은 한번에 4개의 상품까지 주문됩니다." />
+   </children>
+</AnchorPane>

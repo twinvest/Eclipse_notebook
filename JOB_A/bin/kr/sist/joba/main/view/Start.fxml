@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.sist.joba.main.controller.StartController">
+   <children>
+      <ImageView fitHeight="396.0" fitWidth="1166.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../resource/img/HomeDisplay.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="275.0" layoutX="413.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../resource/img/Logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbLogin" layoutX="27.0" layoutY="33.0" text="Login" textFill="#615e5e">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbNonMember" layoutX="551.0" layoutY="33.0" prefHeight="28.0" prefWidth="200.0" text="Non-Members Order" textFill="#615e5e">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="413.0" layoutY="38.0" text="회원이 아니신가요?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbSignUp" layoutX="988.0" layoutY="33.0" text="Sign Up" textFill="#615e5e">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
