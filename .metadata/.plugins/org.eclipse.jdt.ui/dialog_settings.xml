@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext"/>
+	<item key="org.eclipse.jdt.uiformatter_page.modify_dialog_tab_page.last_focus_index" value="0"/>
+	<item key="clean_up_save_particpant_modify_dialog.preferred_width" value="1093"/>
+	<item key="clean_up_save_particpant_modify_dialog.preferred_height" value="776"/>
+	<item key="clean_up_save_particpant_modify_dialog.preferred_x" value="827"/>
+	<item key="clean_up_save_particpant_modify_dialog.preferred_y" value="0"/>
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="OptionalMessageDialog.hide.">
