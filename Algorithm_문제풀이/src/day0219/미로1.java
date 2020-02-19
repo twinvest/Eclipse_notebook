@@ -55,7 +55,8 @@ public class ¹Ì·Î1 {
 	{
 		while(!q.isEmpty())
 		{
-			Pos p = q.poll();
+			Pos
+			p = q.poll();
 			int y = p.y;
 			int x = p.x;
 			if(map[y][x] == 3)
