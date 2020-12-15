@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="WebProgramming_SSAFY">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="WebProgramming_SSAFY"/>
+        <property name="java-output-path" value="/WebProgramming_SSAFY/build/classes"/>
+    </wb-module>
+</project-modules>
