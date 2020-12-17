@@ -2,8 +2,8 @@ package day0221;
 
 import java.util.Arrays;
 
-public class Á¶ÇÕ {
-	static int[] arr = {1,2,3};
+public class ì¡°í•© {
+	static int[] arr = {1,2,3, 4 };
 	static int[] sel = new int[2];
 	static int cnt = 0;
 	public static void main(String[] args) {
@@ -14,11 +14,11 @@ public class Á¶ÇÕ {
 	static void combination(int idx, int s_idx) {
 		if( s_idx == sel.length )
 		{
-			//´Ù°í¸¥°÷
+			//ï¿½Ù°ï¿½ï¿½ï¿½
 			System.out.println(Arrays.toString(sel));
 			return;
 		}
-		//´õÀÌ»ó °í¸¦°Ô ¾ø´Â°Í
+		//ï¿½ï¿½ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½
 		if( idx == arr.length )
 			return;
 

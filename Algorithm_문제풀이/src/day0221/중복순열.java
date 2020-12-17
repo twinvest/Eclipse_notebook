@@ -3,7 +3,7 @@ package day0221;
 
 import java.util.Arrays;
 
-public class Áßº¹¼ø¿­ {
+public class ì¤‘ë³µìˆœì—´ {
 	static int[] arr = {1,2,3};
 	static int[] result = new int[3];
 	public static void main(String[] args) {
