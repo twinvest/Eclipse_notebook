@@ -1,42 +1,37 @@
 package day1218;
-
-import java.util.Arrays;
-
+//정확성통과코드, 효율성은 통과못함. 즉, 그리디로 풀어야한다는말.
 public class 무지의먹방라이브 {
 	public static void main(String[] args) {
-		int[] arr = {946, 314, 757, 322, 559, 647, 983, 482, 145};
-		int ans = solution(arr, 1833);
+		int[] arr = {1,1,1,1,1};
+		int ans = solution(arr, 20);
 		System.out.println(ans);
 	}
 
 	public static int solution(int[] food_times, long k) {
-        int time = 0;
-        int maxIndex = food_times.length;
+        int[] arr = food_times;
+		int time = 0;
         int index = 0;
+        int maxIndex = arr.length;
         while(true) {
-        	if(time == k)
-        		break;
-        	++time;
-        	System.out.println(index%maxIndex);
-        	if(food_times[index%maxIndex] != 0) {
-        		--food_times[index%maxIndex];
-        	}else {
-        		--food_times[++index%maxIndex];
+        	if(time == k) break;
+        	if(arr[index%maxIndex] != 0) {
+        		--arr[index%maxIndex];
+        		++time;
+        		++index;
+        	} else {
+        		++index;
+        	}
+        	boolean flag = true;
+            for(int i :arr) {
+            	if(i != 0)
+            		flag =false;
+            }
+            if(flag) return -1;
+        }
 
-        	}
-        	++index;
-        	System.out.println(Arrays.toString(food_times));
-        }
-        boolean flag = true;
-        for(int i : food_times) {
-        	if(i != 0) {
-        		flag = false;
-        		break;
-        	}
-        }
-        if(flag == true) {
-        	return -1;
-        }
-        return (index%maxIndex)+1;
+        while(arr[index%maxIndex] == 0) {
+    		++index;
+    	}
+        return (index % maxIndex) +1;
     }
 }
