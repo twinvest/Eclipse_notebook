@@ -68,8 +68,9 @@ public class 자물쇠와열쇠 {
         boolean answer = true;
         //90도 회전 4번
         for(int i = 0; i<4; ++i) {
+        	//오른쪽으로이동
         	for(int c = 0; c<M; ++c) {
-
+        		key[r][c]
         	}
 
 
