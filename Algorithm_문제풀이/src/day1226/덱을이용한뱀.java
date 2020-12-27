@@ -1,18 +1,20 @@
-package day1225;
+package day1226;
 
-import java.util.ArrayList;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
 
 
-public class 뱀 {
+public class 덱을이용한뱀 {
 	static int[][] dir = {
-		 {0,1} //오른쪽
-		,{1,0} //아래
-		,{0,-1} //왼쪽
-		,{-1,0} //위
+			{0,1} //오른쪽
+			,{1,0} //아래
+			,{0,-1} //왼쪽
+			,{-1,0} //위
 	};
 	static boolean inside(int y, int x, int size) {
 		return (y >= 0 && y < size) && (x >= 0 && x < size);
@@ -32,13 +34,22 @@ public class 뱀 {
 			this.y = y;
 			this.x = x;
 		}
+		@Override
+		public boolean equals(Object o){
+			boolean isT = false;
+			Pos comp = (Pos)o;
+			if(this.y == comp.y && this.x == comp.x){
+				isT = true;
+			}
+			return isT;
+		}
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		Queue<Direction> directionList = new LinkedList<>();
-		ArrayList<Pos> snakeList = new ArrayList<>();
+		Deque<Pos> snakeList = new ArrayDeque<>();
 
 		int N = scan.nextInt();
 		int[][] map = new int[N][N];
@@ -60,6 +71,8 @@ public class 뱀 {
 		int d = 0;
 		int time = 0;
 		boolean flag = true;
+		int preY = -1;
+		int preX = -1;
 		//while문을 탈출하는 경우는 1. 범위를 벗어난 경우 2. 뱀이 자신의 몸을 밟는 경우
 		while(flag) {
 
@@ -74,8 +87,9 @@ public class 뱀 {
 				continue;
 			}
 			//탈출조건2
-			for(int i = 0; i < snakeList.size(); ++i) {
-				Pos pos = snakeList.get(i);
+			Iterator<Pos> iter = snakeList.iterator();
+			while(iter.hasNext()) {
+				Pos pos = iter.next();
 				if(ny == pos.y && nx == pos.x) {
 					flag = false;
 				}
@@ -89,25 +103,20 @@ public class 뱀 {
 			if(map[ny][nx] == 1) {
 				map[ny][nx] = 0;
 				boolean visitFlag = false;
-				//이거 넣은 이유가 이전에 사과가 나왔으면 꼬리집어넣는거 거르려고 추가함. 코드 좀 세련되게 바꿔보자.
-				for(int i = 0; i < snakeList.size(); ++i) {
-					Pos pos = snakeList.get(i);
-					if(pos.y == y && pos.x == x) {
-						visitFlag = true;
-					}
+				if(snakeList.contains(new Pos(y, x))) {
+					visitFlag = true;
 				}
 				if(!visitFlag)
-					snakeList.add(0, new Pos(y, x));
-				snakeList.add(0, new Pos(ny, nx));
+					snakeList.addFirst(new Pos(y, x));
+				snakeList.addFirst(new Pos(ny, nx));
 			}
 			//사과가 없는 경우
 			else {
 				if(!snakeList.isEmpty()) {
-					snakeList.remove(snakeList.size()-1);
+					snakeList.removeLast();
 				}
-				snakeList.add(0, new Pos(ny, nx));
+				snakeList.addFirst(new Pos(ny, nx));
 			}
-
 
 			y = ny;
 			x = nx;
