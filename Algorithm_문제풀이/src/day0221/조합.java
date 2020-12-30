@@ -12,7 +12,7 @@ import java.util.Arrays;
  *
  * */
 public class 조합 {
-	static int[] arr = {1,2,3, 4 };
+	static int[] arr = {1,2,3, 4,5 };
 	static int[] sel = new int[2];
 	static int cnt = 0;
 	public static void main(String[] args) {
