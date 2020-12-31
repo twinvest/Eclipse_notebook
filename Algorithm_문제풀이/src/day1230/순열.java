@@ -1,12 +1,13 @@
-package day0221;
+package day1230;
 
 import java.util.Arrays;
 
 public class 순열 {
-	static int[] arr = {1,2,3};
+	static int[] arr = {1,2,3,4};
 	static int[] result = new int[arr.length];
 	static boolean[] visited = new boolean[arr.length];
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		perm(0);
 	}
 	static void perm(int depth) {
@@ -15,8 +16,8 @@ public class 순열 {
 			return;
 		}
 		for(int i = 0; i < arr.length; i++) {
-
 			if( !visited[i] ) {
+
 				result[depth] = arr[i];
 				visited[i] = true;
 
