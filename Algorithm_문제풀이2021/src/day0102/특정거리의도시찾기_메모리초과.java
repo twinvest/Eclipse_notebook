@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-public class 특정거리의도시찾기 {
+public class 특정거리의도시찾기_메모리초과 {
 	static class Pos{
 		int y;
 		int x;
@@ -56,25 +56,27 @@ public class 특정거리의도시찾기 {
 		int[] adjVertex = graph[vertex];
 		for(int x =0; x<adjVertex.length; ++x) {
 			if(adjVertex[x] == 1 && !visit[vertex]) {
+
 				Pos pos = new Pos(vertex, x, curDistance);
 				queue.offer(pos);
 			}
 		}
-
+		visit[vertex] = true;
 		while(!queue.isEmpty()) {
 			Pos pos = queue.poll();
-			visit[pos.x] = true;
-			if (pos.d == distance) {
+			if (pos.d == distance && !visit[pos.x]) {
 				ansList.add(pos.x);
 			}
 
 			adjVertex = graph[pos.x];
 			for(int x =0; x < adjVertex.length; ++x) {
-				if(adjVertex[x] == 1 && !visit[pos.x]) {
+				if(adjVertex[x] == 1 && !visit[x]) {
+
 					Pos nextPos = new Pos(pos.x, x, pos.d+1);
 					queue.offer(nextPos);
 				}
 			}
+			visit[pos.x] = true;
 		}
 	}
 }

@@ -106,3 +106,48 @@ java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-01-02 17:34:33.742
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-01-02 18:00:39.939
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-01-02 18:01:53.690
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-01-03 13:18:23.051
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-01-03 13:19:25.856
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY jdt.spelling 4 0 2021-01-03 13:59:04.814
+!MESSAGE Internal error 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/Algorithm_문제풀이2021/src/day0103/특정거리의도시찾기.java)[368]: java.lang.Exception: Resource '/Algorithm_문제풀이2021/src/day0103/특정거리의도시찾기.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.deleteMarkers(Resource.java:790)
+	at jdt.spelling.marker.MarkerFactory.clear(MarkerFactory.java:68)
+	at jdt.spelling.processor.Processor.prepare(Processor.java:40)
+	at jdt.spelling.processor.Processor.access$0(Processor.java:39)
+	at jdt.spelling.processor.Processor$1.run(Processor.java:26)
+	at jdt.spelling.marker.MarkerJob.runInWorkspace(MarkerJob.java:29)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2021-01-03 13:59:04.815
+!MESSAGE Resource '/Algorithm_문제풀이2021/src/day0103/특정거리의도시찾기.java' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Algorithm_문제풀이2021/src/day0103/특정거리의도시찾기.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.deleteMarkers(Resource.java:790)
+	at jdt.spelling.marker.MarkerFactory.clear(MarkerFactory.java:68)
+	at jdt.spelling.processor.Processor.prepare(Processor.java:40)
+	at jdt.spelling.processor.Processor.access$0(Processor.java:39)
+	at jdt.spelling.processor.Processor$1.run(Processor.java:26)
+	at jdt.spelling.marker.MarkerJob.runInWorkspace(MarkerJob.java:29)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
