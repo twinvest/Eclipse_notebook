@@ -56,8 +56,8 @@ public class 감시피하기 {
 								}
 
 								String[][] tempMap = new String[N][N];
-								tempMap = search(map);
-								if(isAnswer(tempMap, numOfStudent)) {
+								tempMap = search(map,N);
+								if(isAnswer(tempMap, numOfStudent, N)) {
 									ansFlag = true;
 								}
 
@@ -82,28 +82,25 @@ public class 감시피하기 {
 		else
 			System.out.println("NO");
 
-
-
-
 	}
-	static String[][] search(String[][] map){
-		String[][] tempMap = new String[map.length][map.length];
-		for(int i = 0; i<map.length; ++i) {
-			for(int j = 0; j<map.length; ++j) {
+	static String[][] search(String[][] map, int N){
+		String[][] tempMap = new String[N][N];
+		for(int i = 0; i<N; ++i) {
+			for(int j = 0; j<N; ++j) {
 				tempMap[i][j] = map[i][j];
 			}
 		}
 
 
-		for(int i = 0; i<tempMap.length; ++i) {
-			for(int j = 0; j<tempMap.length; ++j) {
+		for(int i = 0; i<N; ++i) {
+			for(int j = 0; j<N; ++j) {
 				if(tempMap[i][j].equals("T")) {
 					for(int d = 0; d<4; ++d) {
 						int index = 1;
 						while(true){
 							int ny = i + (dir[d][0] * index);
 							int nx = j + (dir[d][1] * index);
-							if(inside(ny,nx,map.length) && !tempMap[ny][nx].equals("O")) {
+							if(inside(ny, nx, N) && !tempMap[ny][nx].equals("O") && !tempMap[ny][nx].equals("T")) {
 								tempMap[ny][nx] = "K";
 								++index;
 							} else {
@@ -118,15 +115,15 @@ public class 감시피하기 {
 	}
 
 
-	static boolean isAnswer(String[][] tempMap, int numOfStudent) {
+	static boolean isAnswer(String[][] tempMap, int numOfStudent, int N) {
 		int num = 0;
-		for(int i = 0; i<tempMap.length; ++i) {
-			for(int j = 0; j<tempMap.length; ++j) {
-				if(tempMap[i][j].equals("S"))
+		for(int i = 0; i<N; ++i) {
+			for(int j = 0; j<N; ++j) {
+				if(tempMap[i][j].equals("S")) {
 					++num;
+				}
 			}
 		}
 		return num == numOfStudent ? true : false;
 	}
-
 }
