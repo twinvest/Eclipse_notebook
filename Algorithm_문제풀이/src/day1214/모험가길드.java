@@ -20,8 +20,11 @@ public class 모험가길드 {
 				++ans;
 				continue;
 			}
-			if(i + arr[i]-1 <= arr.length && arr[i+arr[i]-1] == arr[i]) {
+			//끝의 값이 범위를 초과하지 않는지 체크하고 해당인덱스의 시작값과 끝값이 같다면
+			if(i + arr[i]-1 < arr.length && arr[i+arr[i]-1] == arr[i]) {
+				//길드를 만들고
 				++ans;
+				//해당인덱스로 점프한다.
 				i = i + arr[i]-1;
 			}
 		}

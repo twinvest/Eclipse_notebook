@@ -53,13 +53,13 @@ public class 인구이동 {
 						//네 방향중 하나라도 bfs를 조질 수 있는곳이 있으면 bfs를 조지기 시작한다.
 						if(inside(ny,nx,N) && visit[ny][nx] == 0 && Math.abs(map[i][j]-map[ny][nx]) >= LOW && Math.abs(map[i][j]-map[ny][nx]) <= HIGH ) {
 							visit[i][j] = ++zone;
-							bfs(i, j, zone);
+							bfs(i, j, zone); //이 bfs를 다 돌고 나오면 하나의 연합이 생성됨. 연합은 zone으로 구분.
 						}
 					}
 				}
 			}
 
-
+			//각 연합에 대해 map을 갱신함.
 			for(int z = 1; z<=zone; ++z) {
 				int sum = 0;
 				int count = 0;
@@ -81,11 +81,15 @@ public class 인구이동 {
 					}
 				}
 			}
-			//true를 반환하면 아무곳도 방문한곳이 없다는것임.
+
+			//만약 이 check함수가 true를 반환하면 아무곳도 방문한곳이 없다는것임. 따라서 탈출한다.
 			if(check())
 				break;
+
+			//탈출하지 못했다면 ans를 하나 올려준다.
 			++ans;
-			//visit배열 방문하지 않은 상태로 전부초기화
+
+			//visit배열을 방문하지 않은 상태로 전부초기화
 			for(int i = 0; i<N; ++i) {
 				for(int j = 0; j<N; ++j) {
 					visit[i][j] = 0;
