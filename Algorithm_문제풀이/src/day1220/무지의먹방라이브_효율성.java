@@ -13,18 +13,20 @@ public class 무지의먹방라이브_효율성 {
 			idx = i;
 		}
 	}
-
+	//시간순으로 정렬
 	Comparator<Food> CompTime = new Comparator<Food>() {
 		@Override
 		public int compare(Food a, Food b) {
-			return a.time - b.time; //오름차순정렬
+			//return a.time - b.time; //오름차순정렬
+			return Integer.compare(a.time, b.time);
 		}
 	};
-
+	//음식순으로 정렬
 	Comparator<Food> CompIdx = new Comparator<Food>() {
 		@Override
 		public int compare(Food a, Food b) {
-			return a.idx - b.idx; //오름차순정렬
+			//return a.idx - b.idx; //오름차순정렬
+			return Integer.compare(a.idx, b.idx);
 		}
 	};
 

@@ -2,8 +2,8 @@ package day1218;
 //정확성통과코드, 효율성은 통과못함. 즉, 그리디로 풀어야한다는말.
 public class 무지의먹방라이브 {
 	public static void main(String[] args) {
-		int[] arr = {1,1,1,1,1};
-		int ans = solution(arr, 20);
+		int[] arr = {3,1,2};
+		int ans = solution(arr, 5);
 		System.out.println(ans);
 	}
 
