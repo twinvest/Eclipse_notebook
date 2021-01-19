@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="isAnswer"/>
+		<item key="selection" value="possible"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="possible"/>
 			<item value="isAnswer"/>
 			<item value="inside"/>
 			<item value="islands"/>
@@ -22,7 +23,6 @@
 			<item value="987564"/>
 			<item value="10"/>
 			<item value="swap"/>
-			<item value="package day0208;\R\Rimport java\.util\.Scanner;\R\Rpublic class 농작물수확하기2 \{\R\tstatic int\[\]\[\] dir = \{\{0,1\},\{0,-1\},\{1,0\},\{-1,0\}\}; //오른쪽 왼쪽 아래 위\R\tstatic boolean inside\(int y, int x, int Size\)\R\t\{\R\t\treturn \(y&gt;=0 &amp;&amp; y&lt;Size\) &amp;&amp; \(x&gt;=0 &amp;&amp; x&lt;Size\);\R\t\}\R\R\tpublic static void main\(String\[\] args\) \{\R\t\t// TODO Auto-generated method stub\R\t\tScanner scan = new Scanner\(System\.in\);\R\t\tint testcase = scan\.nextInt\(\);\R\t\tfor\(int t=1; t&lt;=testcase; \+\+t\)\R\t\t\{\R\t\t\tint sum = 0;\R\t\t\tint N = scan\.nextInt\(\);\R\t\t\tString\[\] arr = new String\[N\];\R\t\t\tint\[\]\[\] map = new int\[N\]\[N\];\R\t\t\tboolean\[\]\[\] visit = new boolean\[N\]\[N\];\R\t\t\tfor\(int i =0 ; i&lt;N; \+\+i\)\R\t\t\t\tarr\[i\] = scan\.next\(\);\R\R\t\t\tfor\(int i=0; i&lt;N; \+\+i\)\R\t\t\t\tfor\(int j=0; j&lt;N; \+\+j\)\R\t\t\t\t\tmap\[i\]\[j\] = Integer\.parseInt\(arr\[i\]\.charAt\(j\)\+&quot;&quot;\);\R\R\t\t\tint y = N/2;\R\t\t\tint x = N/2;\R\t\t\tvisit\[y\]\[x\] = true;\R\t\t\tsum \+= map\[y\]\[x\];\R\R\R\t\t\t\t//System\.out\.println\(p\.y \+&quot;,&quot; \+p\.x\);\R\t\t\t\t//4방탐색\R\t\t\t\tfor\(int d=0; d&lt;4; \+\+d\)\R\t\t\t\t\{\R\t\t\t\t\tint nexty = y\+dir\[d\]\[0\];\R\t\t\t\t\tint nextx = x\+dir\[d\]\[1\];\R\R\R\t\t\t\t\tif\(inside\(nexty, nextx, N\) &amp;&amp; visit\[nexty\]\[nextx\]==false\)\R\t\t\t\t\t\{\R\t\t\t\t\t\tsum \+= map\[nexty\]\[nextx\];\R\t\t\t\t\t\tvisit\[nexty\]\[nextx\] = true;\R\R\t\t\t\t\t\tif\(nexty == 0 \|\| nexty == N-1 \|\| nextx == 0 \|\| nextx == N-1\)\R\t\t\t\t\t\t\{\R\R\t\t\t\t\t\t\}\R\R\t\t\t\t\t\}\R\t\t\t\t\}\R\R\t\t\tSystem\.out\.println\(&quot;#&quot;\+t\+&quot; &quot;\+sum\);\R\t\t\}\R\t\}\R\}\R"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
