@@ -103,9 +103,9 @@ public class 뱀 {
 			//사과가 없는 경우
 			else {
 				if(!snakeList.isEmpty()) {
-					snakeList.remove(snakeList.size()-1);
+					snakeList.remove(snakeList.size()-1); //꼬리를 비우고
 				}
-				snakeList.add(0, new Pos(ny, nx));
+				snakeList.add(0, new Pos(ny, nx));        //머리를 넣는다 ==> 사실 앞으로 전진한 모양.
 			}
 
 
