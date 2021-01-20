@@ -45,25 +45,33 @@ public class 치킨배달 {
 		System.out.println(list.get(0));
 	}
 
+	static public void makeChikenLoad(ArrayList<Pos> house, Pos[] sel) {
+		int rSum = 0;
+		for(Pos home : house) {
+			int x1 = home.x;
+			int y1 = home.y;
+			int minR = 987654321;
+			//한 집과 모든 치킨집의 거리를 비교해 가장 짧은 치킨거리를 구한다.
+			for(Pos chikenPos : sel) {
+				int x2 = chikenPos.x;
+				int y2 = chikenPos.y;
+				int r = Math.abs(x1-x2) + Math.abs(y1-y2);
+				if(r < minR) {
+					minR = r;
+				}
+				//System.out.print("["+chikenPos.y+","+chikenPos.x+"]");
+			}
+			//가장 짧은 치킨거리의 합들이 도시의 치킨거리가 된다.
+			rSum += minR;
+		}
+		//도시의 치킨거리를 list에 넣어준다.
+		list.add(rSum);
+		return;
+	}
+
 	static public void combination(int idx, int s_idx, ArrayList<Pos> house) {
 		if(s_idx == sel.length) {
-			int rSum = 0;
-			for(Pos home : house) {
-				int x1 = home.x;
-				int y1 = home.y;
-				int minR = 987654321;
-				for(Pos chikenPos : sel) {
-					int x2 = chikenPos.x;
-					int y2 = chikenPos.y;
-					int r = Math.abs(x1-x2) + Math.abs(y1-y2);
-					if(r < minR) {
-						minR = r;
-					}
-					//System.out.print("["+chikenPos.y+","+chikenPos.x+"]");
-				}
-				rSum += minR;
-			}
-			list.add(rSum);
+			makeChikenLoad(house, sel);
 			return;
 		}
 		if(idx == arr.length) {

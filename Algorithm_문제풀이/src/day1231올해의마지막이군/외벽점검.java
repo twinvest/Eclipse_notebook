@@ -12,8 +12,8 @@ public class 외벽점검 {
 
     public static void main(String[] args) {
         int n = 12;
-        int[] weak = {1, 5, 6, 10};
-        int[] dist = {1, 2, 3, 4};
+        int[] weak = {1, 3, 4, 9,10};
+        int[] dist = {3,5,7};
 
         int answer = solution(n, weak, dist);
         System.out.println(answer);
@@ -35,19 +35,17 @@ public class 외벽점검 {
             weak_expand.add(weakPoint[i] + Nsize);
 
 
-        int count = 0;
         //친구가 검사 가능한 거리 -> 순열
         LinkedList<Integer> list = new LinkedList<>();
-        makePermutation(0, count, list, dist);
+        makePermutation(0, list, dist);
 
         if(result == Integer.MAX_VALUE) answer = -1;
         else answer = result;
-
         return answer;
     }
 
-    private static void makePermutation(int index, int count, LinkedList<Integer> list, int[] dist) {
-        if(count == dist.length){
+    private static void makePermutation(int depth, LinkedList<Integer> list, int[] dist) {
+        if(depth == dist.length){
             deterPossible(list);
             return;
         }
@@ -56,7 +54,7 @@ public class 외벽점검 {
             if(!checked[i]){
                 checked[i] = true;
                 list.add(dist[i]);
-                makePermutation(i, count+1, list, dist);
+                makePermutation(depth+1, list, dist);
                 list.removeLast();
                 checked[i] = false;
             }
