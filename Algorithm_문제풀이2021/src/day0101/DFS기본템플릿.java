@@ -1,6 +1,7 @@
 package day0101;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class DFS기본템플릿 {
 
@@ -49,6 +50,8 @@ public class DFS기본템플릿 {
 
 		DFS기본템플릿 기본템플릿 = new DFS기본템플릿();
 		기본템플릿.dfs(graph, 1, visit);
+		기본템플릿.stackVerDfsdfs2(graph, 1, visit);
+		기본템플릿.stackVerDfsdfs1(graph, 1, visit);
 	}
 
 	public void dfs(ArrayList<ArrayList<Integer>> graph, int vertex, boolean[] visit) {
@@ -57,6 +60,53 @@ public class DFS기본템플릿 {
 		for(int v : graph.get(vertex)) {
 			if(visit[v] == false) {
 				dfs(graph, v, visit);
+			}
+		}
+	}
+
+	//순서는 좀 다르긴한데 밑에 코드 dfs맞음. 단, 낮은숫자대로 들어가는게 아니라 높은 숫자부터 탐색함...
+	public void stackVerDfsdfs1(ArrayList<ArrayList<Integer>> graph, int vertex, boolean[] visit) {
+		for(int i = 0; i<visit.length; ++i)
+			visit[i] = false;
+
+		System.out.println();
+		Stack<Integer> stack = new Stack<>();
+		stack.add(vertex);
+		visit[vertex] = true;
+
+		while (!stack.isEmpty()) {
+			int curNode = stack.pop();
+			System.out.print(curNode+ " ");
+			for (int nextNode : graph.get(curNode)) {
+				if (!visit[nextNode]) {
+					visit[nextNode] = true;
+					stack.add(nextNode);
+				}
+			}
+		}
+	}
+
+	//stackVersion
+	public void stackVerDfsdfs2(ArrayList<ArrayList<Integer>> graph, int vertex, boolean[] visit) {
+		for(int i = 0; i<visit.length; ++i)
+			visit[i] = false;
+
+		System.out.println();
+		Stack<Integer> stack = new Stack<>();
+		stack.add(vertex);
+		visit[vertex] = true;
+		System.out.print(vertex+" ");
+
+		while (!stack.isEmpty()) {
+			int curNode = stack.pop();
+			for (int nextNode : graph.get(curNode)) {
+				if (!visit[nextNode]) {
+					System.out.print(nextNode+" ");
+					visit[nextNode] = true;
+					stack.add(curNode);
+					stack.add(nextNode);
+					break;
+				}
 			}
 		}
 	}

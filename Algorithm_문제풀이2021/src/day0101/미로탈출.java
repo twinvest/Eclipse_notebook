@@ -50,6 +50,7 @@ public class 미로탈출 {
 		Queue<Pos> queue = new LinkedList<Pos>();
 		boolean[][] visit = new boolean[N][M];
 
+		visit[y][x] = true;
 		queue.offer(new Pos(y, x, 1));
 
 		while(!queue.isEmpty()) {
