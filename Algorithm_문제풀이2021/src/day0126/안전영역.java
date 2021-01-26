@@ -34,23 +34,21 @@ public class 안전영역 {
 		int[][] map = new int[N][N];
 		visit = new boolean[N][N];
 		int maxHeight = -987654321;
-		int minHeight = 987654321;
 		for(int i = 0; i<N; ++i) {
 			for(int j = 0; j<N; ++j) {
 				map[i][j] = scan.nextInt();
-				minHeight = Math.min(minHeight, map[i][j]);
 				maxHeight = Math.max(maxHeight, map[i][j]);
 			}
 		}
 
 		int maxAns = -987564321;
-		for (int height = minHeight; height <= maxHeight; ++height) {
+		for (int height = 0; height <= maxHeight; ++height) {
 			int ans = 0;
 			int[][] copyMap = new int[N][N];
 			//copyMap만들기. 침수지역은 -1로 표시.
 			for(int y = 0; y<N; ++y) {
 				for(int x = 0; x<N; ++x) {
-					if(map[y][x] < height) { //아니 이거 존나 웃기네. 이거 부등호 <= 때문에 개고생했는데 왜이런지를 모르겠네.
+					if(map[y][x] <= height) { //이 부분때문에 고생많이함. height를 0부터 하거나, height을 1부터하면 등호를 <로 바꿔줘야한다.
 						copyMap[y][x] = -1;
 					} else {
 						copyMap[y][x] = map[y][x];
