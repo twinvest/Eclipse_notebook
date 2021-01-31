@@ -18,7 +18,7 @@ public class 경쟁적전염  {
 			this.t=t;
 			this.virus = virus;
 		}
-		@Override
+		@Override 
 		public int compareTo(Pos o) {
 			return Integer.compare(this.virus, o.virus);
 		}
