@@ -25,6 +25,7 @@ public class 안테나 {
 			}
 			if(minSum > sum) {
 				minSum = sum;
+
 				index = i;
 			}
 		}
