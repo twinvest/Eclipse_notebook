@@ -54,15 +54,15 @@ public class 집배원한상덕_구글링1 {
     }
     public static void bfs() {
         int low=0, high=0;
-        while(low<arrList.size()) {
+        while(low < arrList.size() && high < arrList.size() ) {
             visit = new boolean[N][N];
             Queue<Point> queue = new LinkedList<Point>();
             int val = arr[start.y][start.x];
             if(arrList.get(low)<= val && val<=arrList.get(high)) {
                 visit[start.y][start.x] = true;
                 queue.add(new Point(start.x, start.y));
-
             }
+
             int count = 0;
             while(!queue.isEmpty()) {
                 Point po = queue.poll();
