@@ -50,6 +50,16 @@ public class 통나무옮기기 {
 			,{1,0}
 			,{-1,0}
 	};
+	static int[][] dir2 = {
+			{0,1}
+			,{0,-1}
+			,{1,0}
+			,{-1,0}
+			,{-1,-1}
+			,{-1,1}
+			,{1,-1}
+			,{1,1}
+	};
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -91,7 +101,7 @@ public class 통나무옮기기 {
 
 		while(!q.isEmpty()) {
 			Pos cur = q.poll();
-			initMap(cur);
+			//initMap(cur);
 			if(cur.y1 == end.y1 && cur.y2 == end.y2 && cur.y3 == end.y3 && cur.x1 == end.x1 && cur.x2 == end.x2 && cur.x3 == end.x3) {
 				ans = cur.move;
 				return;
@@ -121,6 +131,7 @@ public class 통나무옮기기 {
 			}
 		}
 	}
+	/*
 	static void initMap(Pos cur) {
 		int count = 0;
 		for(int i =0; i<N; ++i) {
@@ -136,6 +147,7 @@ public class 통나무옮기기 {
 		map[cur.y2][cur.x2] = "B";
 		map[cur.y3][cur.x3] = "B";
 	}
+	*/
 	static Pos isRotate(Pos pos, ArrayList<Pos> visit) {
 		//가로로 있는 상태
 		if(pos.y1 == pos.y2 && pos.y2 == pos.y3) {
@@ -145,7 +157,14 @@ public class 통나무옮기기 {
 			int nx1 = nx2;
 			int ny3 = ny2+1;
 			int nx3 = nx2;
-			if(inside(ny2, nx2) && inside(ny1, nx1) && inside(ny3, nx3) && !map[ny1][nx1].equals("1") && !map[ny2][nx2].equals("1") && !map[ny3][nx3].equals("1")) {
+			if(inside(ny2, nx2) && inside(ny1, nx1) && inside(ny3, nx3)) {
+				for(int d=0; d<8; ++d){
+					int ny = ny2 + dir2[d][0];
+					int nx = nx2 + dir2[d][1];
+					if(map[ny][nx].equals("1") || !inside(ny, nx) ) {
+						return new Pos(0,0,0,0,0,0,0, false);
+					}
+				}
 				if(!visit.contains(new Pos(ny1,nx1, ny2,nx2, ny3, nx3, 0))) {
 					return new Pos(ny1,nx1, ny2,nx2, ny3, nx3, pos.move+1, true);
 				}
@@ -160,7 +179,14 @@ public class 통나무옮기기 {
 				int nx1 = nx2-1;
 				int ny3 = ny2;
 				int nx3 = nx2+1;
-				if(inside(ny2, nx2) && inside(ny1, nx1) && inside(ny3, nx3) && !map[ny1][nx1].equals("1") && !map[ny2][nx2].equals("1") && !map[ny3][nx3].equals("1")) {
+				if(inside(ny2, nx2) && inside(ny1, nx1) && inside(ny3, nx3)) {
+					for(int d=0; d<8; ++d){
+						int ny = ny2 + dir2[d][0];
+						int nx = nx2 + dir2[d][1];
+						if(map[ny][nx].equals("1") || !inside(ny, nx) ) {
+							return new Pos(0,0,0,0,0,0,0, false);
+						}
+					}
 					if(!visit.contains(new Pos(ny1,nx1, ny2,nx2, ny3, nx3, 0))) {
 						return new Pos(ny1,nx1, ny2,nx2, ny3, nx3, pos.move+1, true);
 					}
