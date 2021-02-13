@@ -84,39 +84,55 @@ public class 연구소2 {
 		for(int i =0; i<N; ++i) {
 			for(int j =0; j<N; ++j) {
 				copyMap[i][j] = map[i][j];
+				if(map[i][j] == 2) {
+					copyMap[i][j] = 0;
+				}
+				if(map[i][j] == 1) {
+					copyMap[i][j] = -2;
+				}
 			}
 		}
 		boolean flag = false;
+		ans = 987654321;
 		while(!q.isEmpty()) {
 			Pos cur = q.poll();
 			if(isCheck(copyMap)) {
 				flag = true;
-				ans = cur.d + 1;
 				break;
 			}
-
 			for(int d =0;d <4; ++d) {
 				int ny = cur.y + dir[d][0];
 				int nx = cur.x + dir[d][1];
 				if(inside(ny,nx) && copyMap[ny][nx] == 0 && !visit[ny][nx]) {
 					visit[ny][nx] = true;
 					q.add(new Pos(ny,nx,cur.d+1));
-					copyMap[ny][nx] = -3;
+					copyMap[ny][nx] = cur.d+1;
 				}
 			}
 		}
+
 		if(flag) {
-			ansList.add(ans);
+			if(ans == -1) {
+				ansList.add(0);
+			}else {
+				ansList.add(ans);
+			}
+
 		}
 
 	}
 	static boolean isCheck(int[][] copyMap) {
+		int answer = -987654321;
 		for(int i =0; i<N; ++i) {
 			for(int j =0; j<N; ++j) {
 				if(copyMap[i][j] == 0)
 					return false;
+				if(copyMap[i][j] > answer) {
+					answer = copyMap[i][j];
+				}
 			}
 		}
+		ans = answer;
 		return true;
 	}
 }
