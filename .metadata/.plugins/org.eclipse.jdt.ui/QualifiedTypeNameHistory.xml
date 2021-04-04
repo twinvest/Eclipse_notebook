@@ -29,4 +29,5 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.awt.PageAttributes.OriginType"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.Finishings"/>
 </qualifiedTypeNameHistroy>
