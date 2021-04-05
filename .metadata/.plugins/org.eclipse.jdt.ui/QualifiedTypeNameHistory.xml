@@ -30,4 +30,5 @@
     <fullyQualifiedTypeName name="java.awt.PageAttributes.OriginType"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.Finishings"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
