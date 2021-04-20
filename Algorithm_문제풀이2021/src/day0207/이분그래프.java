@@ -24,6 +24,7 @@ public class 이분그래프 {
 			int numOfEdge = scan.nextInt();
 			for(int i = 0; i<=numOfvertex; ++i) {
 				graph.add(new ArrayList<>());
+
 			}
 			int[] visitcolor = new int[numOfvertex+1];
 			boolean[] visit = new boolean[numOfvertex+1];

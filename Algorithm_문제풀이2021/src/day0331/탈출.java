@@ -24,6 +24,7 @@ public class 탈출 {
 	static boolean inside(int y, int x) {
 		return ( y>=0 && y<R ) && ( x>=0 && x<C );
 	}
+
 	static Pos end;
 	static Pos start;
 	static Queue<Pos> q = new LinkedList<>();
@@ -34,6 +35,8 @@ public class 탈출 {
 	static String[][] map;
 	static String[][] map2;
 	static boolean[][] visit;
+
+
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		R = scan.nextInt();
@@ -85,12 +88,15 @@ public class 탈출 {
 				for(int d=0; d<4; ++d) {
 					int ny = start.y + dir[d][0];
 					int nx = start.x + dir[d][1];
+
 					if(ny == end.y && nx ==end.x) {
 						ans = start.d+1;
 						return;
 					}
+
 					if (inside(ny,nx) && (map[ny][nx].equals("*") || map[ny][nx].equals("X")))
 						continue;
+
 					if(inside(ny,nx) && !visit[ny][nx]) {
 						visit[ny][nx] = true;
 						q2.add(new Pos(ny,nx,start.d+1));
