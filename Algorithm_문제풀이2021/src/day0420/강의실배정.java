@@ -37,10 +37,10 @@ public class 강의실배정 {
 		int ans = 1;
 		for(int i=1; i<list.size();++i) {
 			if(preEnd > list.get(i).startTime) {
-				++ans;
 				continue;
 			}
 			preEnd = list.get(i).endTime;
+			++ans;
 			//System.out.println("start : "+list.get(i).startTime +", "+ "end : " +list.get(i).endTime);
 		}
 		System.out.println(ans);
