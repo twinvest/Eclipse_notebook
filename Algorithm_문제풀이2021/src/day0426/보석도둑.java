@@ -68,7 +68,7 @@ public class 보석도둑 {
 	static int binarySearch(int start, int end, int target) {
 
 		int mid = (start + end) / 2;
-		if(start >= end) {
+		if(start > end) {
 			return mid;
 		}
 		if(target > poketList.get(end)) {

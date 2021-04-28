@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="long"/>
 			<item value="int"/>
 			<item value="visit"/>
 			<item value="for"/>
@@ -22,9 +23,10 @@
 			<item value="index"/>
 			<item value="possible"/>
 			<item value="isAnswer"/>
-			<item value="inside"/>
 		</list>
 		<list key="replacehistory">
+			<item value="int"/>
+			<item value="long"/>
 			<item value=""/>
 			<item value="\n"/>
 		</list>
