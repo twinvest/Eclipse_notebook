@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="java.awt.Robot"/>
     <fullyQualifiedTypeName name="java.awt.event.InputEvent"/>
     <fullyQualifiedTypeName name="day0420.강의실배정.Lecture"/>
-    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -36,4 +35,6 @@
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="day0426.보석도둑.Diamond"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="day0428.보석도둑_구글링.Diamond"/>
+    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 </qualifiedTypeNameHistroy>

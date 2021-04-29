@@ -21,6 +21,7 @@ public class 무지의먹방라이브_효율성 {
 			return Integer.compare(a.time, b.time);
 		}
 	};
+
 	//음식순으로 정렬
 	Comparator<Food> CompIdx = new Comparator<Food>() {
 		@Override
@@ -57,9 +58,9 @@ public class 무지의먹방라이브_효율성 {
 					k -= spend;
 					pretime = f.time;
 				} else {
-					k %= n;
-					foods.subList(i, food_times.length).sort(CompIdx);
-					return foods.get(i+(int)k).idx;
+					k %= n;//남은 시간을 남은 음식의 개수로 나눈 나머짓값. ==> 이 부분을 생각하는게 넘 어려움.
+					foods.subList(i, food_times.length).sort(CompIdx); //다시 원래순서로 리스트를 돌려놓음. 근데 그것도 i번째부터임. 즉, 이미 처리한 음식은 정렬안시킨다는말.
+					return foods.get(i+(int)k).idx; //i에다가 k를 더해줌. 즉, 정렬시킨 다음의 원소부터 위에서 구해놓은 남은 시간을 남은 음식의 개수로 나눈 나머짓값을 더해줌.
 				}
 			}
 			++i;
