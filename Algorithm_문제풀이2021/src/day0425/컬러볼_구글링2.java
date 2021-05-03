@@ -38,7 +38,7 @@ public class 컬러볼_구글링2 {
 			ballArr[i] = new Ball(c, w, i);
 		}
 
-		//size순으로 오름차순 정렬
+		//weight순으로 오름차순 정렬
 		Arrays.sort(ballArr);
 		int sum = 0;
 		for(int i =0; i<N; ++i) {
@@ -62,6 +62,7 @@ public class 컬러볼_구글링2 {
 				ans[index] = ans[ballArr[i-1].idx];
 			}
 		}
+
 		for(int i =0; i<N; ++i) {
 			System.out.println(ans[i]);
 		}
