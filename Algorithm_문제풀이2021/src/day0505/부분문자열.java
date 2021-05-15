@@ -42,7 +42,7 @@ public class 부분문자열 {
 
 		for(int i=1; i<LenOfPattern; i++) {      // i = 1부터
 			while(j > 0 && pattern.charAt(i) != pattern.charAt(j)) { // KMP알고리즘, 매칭되는 것 건너뛴다
-				j = 0;//pi[j-1];  j를 0이라 하면될것을 후..개같은 녀석들이  pi[j-1]이라 하는지 모르겠네;; // j를 재할당 (건너 뜀)
+				j = 0;//pi[j-1];  j를 0이라 하면될것을 후.. pi[j-1]이라 하는지 모르겠네;; // j를 재할당 (건너 뜀)
 			}
 			if(pattern.charAt(i) == pattern.charAt(j)) {            // 접두사랑 접미사가 같다면
 				pi[i] = ++j;                                          // 해당 인덱스 카운트  (길이)
@@ -84,7 +84,7 @@ public class 부분문자열 {
 	            }
 	        }
 	        else{
-	            // 일치하는 부분이 없는 경우, 다음 위치의 문자 부터 탐색
+	            //  일치하는 부분이 없는 경우, 다음 위치의 문자 부터 탐색
 	            if(matched == 0)
 	                ++begin;
 	            // 문자열이 불일치 하므로 접두사, 접미사 의 길이 만큼 건너 뜀!

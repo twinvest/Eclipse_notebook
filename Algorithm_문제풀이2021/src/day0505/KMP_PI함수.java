@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class KMP_PI함수 {
 
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(getPi2("abacaaba")));
+		System.out.println(Arrays.toString(getPi2("ACCA")));
 	}
 	public static int[] getPi(String pattern) {  // 접두사와 접미사 매칭 Count
 		int m = pattern.length();     // 찾을 Pattern's Length

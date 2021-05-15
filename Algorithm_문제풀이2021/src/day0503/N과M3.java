@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
+/*
+ * 중복순열은 방문체크를 하지 않는다.
+ * */
 public class N과M3 {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static int[] sel, arr;
@@ -13,11 +16,9 @@ public class N과M3 {
 		Scanner scan = new Scanner(System.in);
 		N = scan.nextInt();
 		M = scan.nextInt();
-		//arr = new int[N];
+
 		sel = new int[M];
-		/*for(int i = 1; i<=N; ++i) {
-			arr[i-1] = i;
-		}*/
+
 		rePerm(0);
 		bw.flush();
 	}

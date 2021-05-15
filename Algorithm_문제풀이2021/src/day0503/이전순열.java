@@ -31,23 +31,29 @@ public class 이전순열 {
 		}
 
 		int i = N-1;
+		//뒤에서 부터 비교를 시작하는데
 		for(; i > 0; --i) {
+			//앞의 수가 뒤의 수보다 큰 경우가 나오면
 			if(list.get(i-1) > list.get(i))
 				break;
 		}
 		//i가 0이란것은 모두 오름차순정렬 되어있다는것. 즉, 1 2 3 4 5 같은 경우.
 		if(i == 0) {
+
 			System.out.println(-1);
-		} else {
+		}
+		//위 for문에서 break으로 빠져나온 경우. else로 진입.
+		else {
 			int j = N-1;
+			//j를 뒤에서부터 줄여가면서 i-1인덱스보다 작은 수가 나오면 탈출.
 			while(list.get(i-1) < list.get(j)) {
 				--j;
 			}
 
-			//swap
+			//swap. 둘의 자리를 교체.
 			Collections.swap(list, i-1, j);
 
-
+			//i인덱스부터 내림차순 정렬.
 			List<Integer> subList1 = list.subList(i, list.size());
 			Collections.reverse(subList1);
 			List<Integer> subList2 = list.subList(0, i);
