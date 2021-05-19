@@ -23,6 +23,7 @@ public class RGB거리 {
 			dp[i][1] = Math.min(dp[i-1][0], dp[i-1][2]) + colorCost[i][1];
 			dp[i][2] = Math.min(dp[i-1][0], dp[i-1][1]) + colorCost[i][2];
 		}
+
 		System.out.println(Math.min(Math.min(dp[N][0], dp[N][1]), dp[N][2]));
 	}
 }

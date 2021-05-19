@@ -37,8 +37,8 @@ public class 연산자끼워넣기 {
 				for(int j = 0; j<operator[i]; ++j)
 					operList.add("/");
 			}
-
 		}
+
 		arr = new String[numOfSeq-1];
 		result = new String[numOfSeq-1];
 		visited = new boolean[numOfSeq-1];
@@ -74,13 +74,10 @@ public class 연산자끼워넣기 {
 
 	static void perm(int depth) {
 		if( depth == result.length ) {
-			//System.out.println(Arrays.toString(result));
 			calc(result);
-
 			return;
 		}
 		for(int i = 0; i < arr.length; i++) {
-
 			if( !visited[i] ) {
 				result[depth] = arr[i];
 				visited[i] = true;

@@ -49,13 +49,12 @@ public class 단어수학 {
 
 	static void makeAns() {
 		int tempResult = 0;
-		int cnt = 0;
 
 		int[] a = new int[26];
 		for(int i = 0; i<charList.size(); ++i) {
 			char ch = charList.get(i);
 			int numOfCh = permList.get(i);
-			a[ch - 'A'] = numOfCh;
+			a[ch - 'A'] = numOfCh; //이번 순열에서 해당 알파벳에 선택된 숫자
 		}
 
 		for(int i = 0; i<strList.size(); ++i) {

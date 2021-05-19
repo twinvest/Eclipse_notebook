@@ -10,9 +10,11 @@ public class 조합 {
 		Scanner scan = new Scanner(System.in);
 		int N = scan.nextInt();
 		int M = scan.nextInt();
-		ArrayList<Integer> list1 = new ArrayList<>();
-		ArrayList<Integer> list3 = new ArrayList<>();
-		ArrayList<Integer> list2 = new ArrayList<>();
+		ArrayList<Integer> list1 = new ArrayList<>(); //분자
+		ArrayList<Integer> list3 = new ArrayList<>(); //분모
+		ArrayList<Integer> list2 = new ArrayList<>(); //정제된 분모
+
+
 		for(int i =1; i<=M; ++i) {
 			list3.add(i);
 			list1.add(N-(i-1));
@@ -43,25 +45,25 @@ public class 조합 {
 
 		label :
 			for(int i =0; i<list1.size(); ++i) {
-				int num1 = list1.get(i);
+				int child = list1.get(i);
 				for(int j = 0; j<list2.size(); ++j) {
-					int num2 = list2.get(j);
+					int mom = list2.get(j);
 					//나누려는 수가 1이면 remove
-					if(num2 == 1) {
+					if(mom == 1) {
 						list2.remove(j);
 						--j;
 						continue;
 					}
 					//그렇지 않으면 실제로 나눠준다. 그리고 나눠진수를 list1에 다시 넣어준다. 그리고 list2에는 1을 넣어준다.
-					if(num1 % num2 == 0) {
-						num1 /= num2;
+					if(child % mom == 0) {
+						child /= mom;
 						list1.remove(i);
-						list1.add(i, num1);
+						list1.add(i, child);
 						--i;
 
-						num2 = 1;
+						mom = 1;
 						list2.remove(j);
-						list2.add(j, num2);
+						list2.add(j, mom);
 						continue label;
 					}
 				}
