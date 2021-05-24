@@ -1,7 +1,9 @@
 package day0522;
 
 import java.util.Scanner;
-
+/*
+ * https://songsunbi.tistory.com/80
+ * */
 public class 퇴사 {
 	static int[] t = new int[21];
 	static int[] p = new int[21];
