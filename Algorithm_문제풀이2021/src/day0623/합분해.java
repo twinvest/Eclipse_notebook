@@ -1,3 +1,4 @@
+package day0623;
 import java.util.Scanner;
 
 public class 합분해 {
