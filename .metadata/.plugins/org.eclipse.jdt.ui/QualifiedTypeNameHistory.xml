@@ -15,7 +15,6 @@
     <fullyQualifiedTypeName name="day0203.국영수.Student"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Deque"/>
-    <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.awt.PageAttributes.OriginType"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.Finishings"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -36,6 +35,7 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
 </qualifiedTypeNameHistroy>
