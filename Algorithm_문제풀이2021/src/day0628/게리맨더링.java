@@ -10,6 +10,7 @@ public class 게리맨더링 {
 	static int[] peopleArr = new int[11];
 	static int[] sel;
 	static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
+	static int ans = 987654321;
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		N = scan.nextInt();
@@ -31,6 +32,10 @@ public class 게리맨더링 {
 			sel = new int[i];
 			combination(1, 0);
 		}
+
+		if(ans == 987654321)
+			ans = -1;
+		System.out.println(ans);
 
 	}
 
@@ -65,52 +70,61 @@ public class 게리맨더링 {
 			}
 		}
 
-		boolean flag1 = bfs1(group1.get(0), group1);
-		boolean flag2 = bfs2(group2.get(0), group2);
-
-		if (flag1 && flag2) {
-			//ans = Math.min(ans, );
-		}
-
-	}
-	static int ans = 987654321;
-	static boolean[] visit1 = new boolean[N+1];
-	static boolean[] visit2 = new boolean[N+1];
-
-	static boolean bfs1(int vertex, ArrayList<Integer> group1) {
-		Queue<Integer> q = new LinkedList<>();
-		q.add(vertex);
-		visit1[vertex] = true;
-		while(!q.isEmpty()) {
-			int cur = q.poll();
-			for(int i =0; i<group1.size(); ++i) {
-
+		if(search(group1) && search(group2)) {
+			int team1 =0;
+			int team2= 0;
+			for(int a : group1) {
+				team1 += peopleArr[a];
 			}
 
+			for(int a : group2) {
+				team2 += peopleArr[a];
+			}
+			ans = Math.min(Math.abs(team1 - team2), ans);
+		}
+	}
+
+	static boolean bfs(int vertex, ArrayList<Integer> group) {
+		boolean[] targetVisit = new boolean[N+1];
+		boolean[] visit = new boolean[N+1];
+		for(int num : group) {
+			targetVisit[num] = true;
+		}
+
+		Queue<Integer> q = new LinkedList<>();
+		q.add(vertex);
+		visit[vertex] = true;
+
+		while(!q.isEmpty()) {
+			int cnt = 0;
+			int cur = q.poll();
+			for(int num : group) {
+				if(targetVisit[num] == visit[num])
+					++cnt;
+			}
+
+			if(cnt == group.size())
+				return true;
+
 			for(int next : graph.get(cur)) {
-				if(!visit1[next]) {
-					visit1[next] = true;
+				if(!visit[next]) {
+					visit[next] = true;
 					q.add(next);
 				}
 			}
 		}
+
 		return false;
+
 	}
 
-	static boolean bfs2(int vertex, ArrayList<Integer> group2) {
-		Queue<Integer> q = new LinkedList<>();
-		q.add(vertex);
-		visit2[vertex] = true;
-		while(!q.isEmpty()) {
-			int cur = q.poll();
-
-			for(int next : graph.get(cur)) {
-				if(!visit2[next]) {
-					visit2[next] = true;
-					q.add(next);
-				}
-			}
+	static boolean search(ArrayList<Integer> group) {
+		boolean flag = false;
+		for(int vertex : group) {
+			flag = bfs(vertex, group);
+			if(flag) break;
 		}
-		return false;
+		return flag;
 	}
+
 }
