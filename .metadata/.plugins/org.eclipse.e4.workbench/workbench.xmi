@@ -593,7 +593,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_GEZQcNgbEeuD2u3HQUIRLA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot; partName=&quot;&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot; title=&quot;&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot; tooltip=&quot;Algorithm_&#xbb38;&#xc81c;&#xd480;&#xc774;2021/src/day0628/&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Algorithm_&#xbb38;&#xc81c;&#xd480;&#xc774;2021/src/day0628/&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1871&quot; selectionTopPixel=&quot;1544&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot; partName=&quot;&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot; title=&quot;&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot; tooltip=&quot;Algorithm_&#xbb38;&#xc81c;&#xd480;&#xc774;2021/src/day0628/&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Algorithm_&#xbb38;&#xc81c;&#xd480;&#xc774;2021/src/day0628/&#xac8c;&#xb9ac;&#xb9e8;&#xb354;&#xb9c1;.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;241&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -1239,7 +1239,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RIREPLY2EeuVKrekT02STw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Y_DOgNgZEeuD2u3HQUIRLA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_RITi5LY2EeuVKrekT02STw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_uC0uwNjTEeu0Y_IMN5JV7w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_RITi5LY2EeuVKrekT02STw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RIRESbY2EeuVKrekT02STw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1312,7 +1312,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RIREurY2EeuVKrekT02STw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Y_GR0NgZEeuD2u3HQUIRLA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_RITiibY2EeuVKrekT02STw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_uC5AMNjTEeu0Y_IMN5JV7w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_RITiibY2EeuVKrekT02STw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RIRExbY2EeuVKrekT02STw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

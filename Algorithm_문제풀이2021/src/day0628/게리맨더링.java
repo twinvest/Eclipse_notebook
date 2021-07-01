@@ -1,16 +1,13 @@
 package day0628;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class 게리맨더링 {
 	static int N;
 	static int[] peopleArr = new int[11];
 	static int[] sel;
-	static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
 	static int ans = 987654321;
+	static int[][] graph = new int[11][11];
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		N = scan.nextInt();
@@ -18,16 +15,13 @@ public class 게리맨더링 {
 			peopleArr[i] = scan.nextInt();
 		}
 
-		for(int i=0; i<=N; ++i) {
-			graph.add(new ArrayList<>());
-		}
-
 		for(int i=1; i<=N; ++i) {
 			int numOfEdge = scan.nextInt();
 			for(int j=0; j<numOfEdge; ++j ) {
-				graph.get(i).add(scan.nextInt());
+				graph[i][scan.nextInt()] = 1;
 			}
 		}
+
 		for(int i=1; i<=N/2; ++i) {
 			sel = new int[i];
 			combination(1, 0);
@@ -54,77 +48,56 @@ public class 게리맨더링 {
 		combination(idx+1, s_idx);
 	}
 
+	static int[] group ;
+	static boolean[] visit;
+	static int partSum;
+
 	static void calc() {
-		boolean[] tmpCheck = new boolean[N+1];
-		ArrayList<Integer> group1 = new ArrayList<>();
-		ArrayList<Integer> group2 = new ArrayList<>();
+		group = new int[N+1];
+		visit = new boolean[N+1];
+		for(int i : sel)
+			group[i] = 1;
 
-		for(int i : sel) {
-			tmpCheck[i] = true;
-			group1.add(i);
-		}
-
-		for(int i =1; i<=N; ++i) {
-			if(!tmpCheck[i]) {
-				group2.add(i);
+		int people1 = 0;
+		int people2 = 0;
+		for(int i = 1; i<N+1; i++) {
+			if(group[i] == 1 && !visit[i]) {
+				partSum = 0;
+				dfs(i);
+				people1 = partSum;
+				break;
 			}
 		}
 
-		if(search(group1) && search(group2)) {
-			int team1 =0;
-			int team2= 0;
-			for(int a : group1) {
-				team1 += peopleArr[a];
+		for(int i = 1; i<N+1; i++) {
+			if(group[i] == 0 && !visit[i]) {
+				partSum = 0;
+				dfs(i);
+				people2 = partSum;
+				break;
 			}
-
-			for(int a : group2) {
-				team2 += peopleArr[a];
-			}
-			ans = Math.min(Math.abs(team1 - team2), ans);
 		}
+
+		//한곳이라도 방문하지 않은곳이 있다면 종료
+		for(int i = 1; i<N+1; i++) {
+			if(!visit[i]) {
+				return;
+			}
+		}
+		ans = Math.min(Math.abs(people2-people1), ans);
 	}
 
-	static boolean bfs(int vertex, ArrayList<Integer> group) {
-		boolean[] targetVisit = new boolean[N+1];
-		boolean[] visit = new boolean[N+1];
-		for(int num : group) {
-			targetVisit[num] = true;
-		}
 
-		Queue<Integer> q = new LinkedList<>();
-		q.add(vertex);
+
+	static void dfs(int vertex) {
 		visit[vertex] = true;
-
-		while(!q.isEmpty()) {
-			int cnt = 0;
-			int cur = q.poll();
-			for(int num : group) {
-				if(targetVisit[num] == visit[num])
-					++cnt;
-			}
-
-			if(cnt == group.size())
-				return true;
-
-			for(int next : graph.get(cur)) {
-				if(!visit[next]) {
-					visit[next] = true;
-					q.add(next);
-				}
+		partSum += peopleArr[vertex];
+		for(int i = 1; i<=N; i++) {
+			//방문했는지, 같은 지역구에 속하는지, 연결이 되어있는지
+			if(!visit[i] && group[vertex] == group[i] && graph[i][vertex] == 1) {
+				dfs(i);
 			}
 		}
-
-		return false;
-
-	}
-
-	static boolean search(ArrayList<Integer> group) {
-		boolean flag = false;
-		for(int vertex : group) {
-			flag = bfs(vertex, group);
-			if(flag) break;
-		}
-		return flag;
 	}
 
 }
