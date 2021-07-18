@@ -2,7 +2,7 @@ package day0707;
 
 import java.util.Scanner;
 
-public class 동전1_효율적인화폐구성 {
+public class 동전2_효율적인화폐구성 {
 	static int[] dp = new int[100001];
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
