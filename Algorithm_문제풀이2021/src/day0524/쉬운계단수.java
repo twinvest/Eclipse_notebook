@@ -1,7 +1,10 @@
 package day0524;
 
 import java.util.Scanner;
-
+/*
+ *    dp[N][L] = dp[N - 1][L - 1] + dp[N - 1][L + 1]
+ *    길이가 N 일 때, 마지막 수가 L일 경우의 계단 수
+ * */
 public class 쉬운계단수 {
 	static long[][] dp = new long[101][11];
 	static int N;

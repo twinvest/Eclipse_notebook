@@ -17,8 +17,10 @@ public class 평범한배낭 {
 		}
 		System.out.println(go(0,0));
 	}
+
 	static int go(int i, int w) {
-		if(dp[i][w] > 0) return dp[i][w];
+		if(dp[i][w] > 0)
+			return dp[i][w];
 		if(i == N)
 			return 0;
 

@@ -1,6 +1,9 @@
 package day0623;
 import java.util.Scanner;
-
+/*
+ * DP[a][b] = c 의 의미는 "a개 더해서 그 합이 b가 되는 경우의 수는 c개 입니다." 이다.
+ *
+ * */
 public class 합분해 {
 	static int N, K;
 	static int[][] dp = new int[201][201];
