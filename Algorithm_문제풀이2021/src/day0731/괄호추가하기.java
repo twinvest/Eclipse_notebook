@@ -1,11 +1,10 @@
 package day0731;
-
 import java.util.Scanner;
 class Term {
     int num, op;
     Term(int num, int op) {
-        this.num = num;  //
-        this.op = op;    //
+        this.num = num;
+        this.op = op;
     }
 }
 public class 괄호추가하기 {
@@ -51,8 +50,9 @@ public class 괄호추가하기 {
 
             //식을 먼저 계산
             for (int j=0; j<m; j++) {
-                if ((i&(1<<j)) > 0) {
+                if ((i&(1<<j)) > 0) { //먼저 계산할게 선택된 것임.
                     int k = 2*j+1;
+                    //실제로 여기서부터 먼저 계산해주고 뒤에는 0을 밖아준다.
                     if (b[k].op == 1) {
                         b[k-1].num += b[k+1].num;
                         b[k+1].num = 0;
