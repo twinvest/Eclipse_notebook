@@ -1,8 +1,7 @@
-package day0726;
+package day0802;
 
 import java.util.Scanner;
-
-public class 파이프옮기기1 {
+public class 파이프옮기기2 {
 	static int[][] map;
 	static long[][][] dp;
 	static int N;
