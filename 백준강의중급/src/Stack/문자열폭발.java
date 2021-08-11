@@ -46,11 +46,15 @@ public class 문자열폭발 {
                             }
                         }
                         //이 부분이 인해가 안감...
-                        /*else {
+                        /* 주석처리하고 아래 케이스 돌려보면 이해가 갈거임.
+                         * 123
+						 * 13
+                         * */
+                        else {
                             while (!s.empty()) {
                                 s.pop();
                             }
-                        }*/
+                        }
                     }
                 }
             }
@@ -67,6 +71,7 @@ public class 문자열폭발 {
         }
         if (printed) {
             System.out.println(sb);
+
         } else {
             System.out.println("FRULA");
         }
