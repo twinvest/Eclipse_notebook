@@ -11,6 +11,7 @@ public class 문자열폭발 {
 	        this.second = second;
 	    }
 	}
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         String a = sc.nextLine();
