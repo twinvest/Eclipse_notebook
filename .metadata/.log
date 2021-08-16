@@ -5616,3 +5616,12 @@ java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-08-16 16:49:58.125
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-08-17 00:08:01.922
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-08-17 00:08:14.696
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-08-17 00:09:00.700
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread

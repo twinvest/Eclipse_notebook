@@ -69,7 +69,7 @@ public class 부분문자열 {
 	public static void KMP(String str, String pattern) {  // 매칭되는 str을 ArrayList에 저장
 
 		ArrayList<Integer> list = new ArrayList<>();      // 매칭된 str을 저장할 ArrayList
-		int [] pi = getPi2(pattern);                       // 찾을 패턴의 접두사와 접미사가 카운트된 배열 불러온다
+		int [] pi = getPi(pattern);                       // 찾을 패턴의 접두사와 접미사가 카운트된 배열 불러온다
 		int n = str.length();
 		int m = pattern.length();
 		int begin = 0, matched = 0;
