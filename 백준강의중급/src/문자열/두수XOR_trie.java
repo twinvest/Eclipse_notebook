@@ -66,8 +66,10 @@ public class 두수XOR_trie {
 			if (trie.get(node).children[c] == -1) {
 				return 0;
 			}
+
 			int next = 0;
-			if (c == 1) next = 1 << bit;
+			if (c == 1)
+				next = 1 << bit;
 			return next | query(trie.get(node).children[c], num, bit-1);
 		}
 
