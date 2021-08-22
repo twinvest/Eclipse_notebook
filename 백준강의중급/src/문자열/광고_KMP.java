@@ -1,5 +1,11 @@
 package 문자열;
 import java.util.Scanner;
+
+/*
+ * "abcdab"는 "ab"가 양끝에서 반복되므로 "abcd"가 반복된다고 추론할 수 있음.
+ *
+ * */
+
 public class 광고_KMP {
     static int[] preprocessing(String p) {
         int m = p.length();

@@ -21,6 +21,7 @@ public class 찾기_KMP {
         }
         return pi;
     }
+
     static ArrayList<Integer> kmp(String s, String p) {
         int[] pi = preprocessing(p);
         ArrayList<Integer> ans = new ArrayList<Integer>();
@@ -42,6 +43,7 @@ public class 찾기_KMP {
         }
         return ans;
     }
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();

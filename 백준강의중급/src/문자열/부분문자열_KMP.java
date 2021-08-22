@@ -22,6 +22,8 @@ public class 부분문자열_KMP {
         }
         return pi;
     }
+
+
     static ArrayList<Integer> kmp(String s, String p) {
         int[] pi = preprocessing(p);
         ArrayList<Integer> ans = new ArrayList<Integer>();
