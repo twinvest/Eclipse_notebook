@@ -77,6 +77,7 @@ public class 두수XOR_trie {
 			return query(root, num, 31);
 		}
 	}
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
