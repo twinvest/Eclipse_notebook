@@ -8452,3 +8452,88 @@ java.net.UnknownHostException: 알려진 호스트가 없습니다 (jope.ow2.org
 	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY jdt.spelling 4 0 2021-10-03 20:36:08.173
+!MESSAGE Internal error 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Marker id 4904325 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
+	at org.eclipse.core.internal.resources.Marker.setAttributes(Marker.java:299)
+	at jdt.spelling.marker.MarkerFactory.scheduleWorkspaceJob(MarkerFactory.java:38)
+	at jdt.spelling.marker.MarkerFactory.create(MarkerFactory.java:24)
+	at jdt.spelling.processor.Processor.process(Processor.java:36)
+	at jdt.spelling.processor.Processor.access$1(Processor.java:35)
+	at jdt.spelling.processor.Processor$1.run(Processor.java:28)
+	at jdt.spelling.marker.MarkerJob.runInWorkspace(MarkerJob.java:29)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 376 2021-10-03 20:36:08.173
+!MESSAGE Marker id 4904325 not found.
+
+!ENTRY jdt.spelling 4 0 2021-10-03 20:37:01.676
+!MESSAGE Internal error 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Marker id 4904417 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
+	at org.eclipse.core.internal.resources.Marker.setAttributes(Marker.java:299)
+	at jdt.spelling.marker.MarkerFactory.scheduleWorkspaceJob(MarkerFactory.java:38)
+	at jdt.spelling.marker.MarkerFactory.create(MarkerFactory.java:24)
+	at jdt.spelling.processor.Processor.process(Processor.java:36)
+	at jdt.spelling.processor.Processor.access$1(Processor.java:35)
+	at jdt.spelling.processor.Processor$1.run(Processor.java:28)
+	at jdt.spelling.marker.MarkerJob.runInWorkspace(MarkerJob.java:29)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 376 2021-10-03 20:37:01.677
+!MESSAGE Marker id 4904417 not found.
+
+!ENTRY jdt.spelling 4 0 2021-10-03 20:46:07.538
+!MESSAGE Internal error 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Marker id 4905455 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
+	at org.eclipse.core.internal.resources.Marker.setAttributes(Marker.java:299)
+	at jdt.spelling.marker.MarkerFactory.scheduleWorkspaceJob(MarkerFactory.java:38)
+	at jdt.spelling.marker.MarkerFactory.create(MarkerFactory.java:24)
+	at jdt.spelling.processor.Processor.process(Processor.java:36)
+	at jdt.spelling.processor.Processor.access$1(Processor.java:35)
+	at jdt.spelling.processor.Processor$1.run(Processor.java:28)
+	at jdt.spelling.marker.MarkerJob.runInWorkspace(MarkerJob.java:29)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 376 2021-10-03 20:46:07.539
+!MESSAGE Marker id 4905455 not found.
+
+!ENTRY jdt.spelling 4 0 2021-10-03 20:57:16.562
+!MESSAGE Internal error 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Marker id 4906637 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
+	at org.eclipse.core.internal.resources.Marker.setAttributes(Marker.java:299)
+	at jdt.spelling.marker.MarkerFactory.scheduleWorkspaceJob(MarkerFactory.java:38)
+	at jdt.spelling.marker.MarkerFactory.create(MarkerFactory.java:24)
+	at jdt.spelling.processor.Processor.process(Processor.java:36)
+	at jdt.spelling.processor.Processor.access$1(Processor.java:35)
+	at jdt.spelling.processor.Processor$1.run(Processor.java:28)
+	at jdt.spelling.marker.MarkerJob.runInWorkspace(MarkerJob.java:29)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 376 2021-10-03 20:57:16.562
+!MESSAGE Marker id 4906637 not found.
+
+!ENTRY jdt.spelling 4 0 2021-10-03 20:58:54.258
+!MESSAGE Internal error 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Marker id 4906791 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
+	at org.eclipse.core.internal.resources.Marker.setAttributes(Marker.java:299)
+	at jdt.spelling.marker.MarkerFactory.scheduleWorkspaceJob(MarkerFactory.java:38)
+	at jdt.spelling.marker.MarkerFactory.create(MarkerFactory.java:24)
+	at jdt.spelling.processor.Processor.process(Processor.java:36)
+	at jdt.spelling.processor.Processor.access$1(Processor.java:35)
+	at jdt.spelling.processor.Processor$1.run(Processor.java:28)
+	at jdt.spelling.marker.MarkerJob.runInWorkspace(MarkerJob.java:29)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 376 2021-10-03 20:58:54.258
+!MESSAGE Marker id 4906791 not found.
