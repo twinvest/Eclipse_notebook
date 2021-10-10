@@ -26,20 +26,21 @@ public class 등차수열변환 {
 				if(d1 != 0) change +=1;
 				if(d2 != 0) change +=1;
 
-				int a0 = a[0] + d1;
-				int diff = (a[1]+d2) -a0; //공차임.
+				int a0 = (a[0] + d1); //입력받은 a0이 아닌 진짜 a0을 만들어본다.
+				int diff = (a[1] + d2) -a0; //공차임.
 				boolean ok = true;
 
 				int an = a0 + diff; //a1이 구해짐.
 				//a2부터 비교시작.
 				for(int i =2; i<N; ++i) {
 					an += diff;
-					if(a[i] == an) continue;
+					if(a[i] == an)
+						continue;
 					if(a[i]-1 == an) {
 						change +=1;
 					} else if(a[i]+1 == an) {
 						change +=1;
-					}else {
+					} else {
 						ok = false;
 						break;
 					}
