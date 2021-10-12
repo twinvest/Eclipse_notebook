@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="next_permutation"/>
+		<item key="selection" value="int r=row+s, c=col-s; r&gt;row-s; r--"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="int r=row\+s, c=col-s; r&gt;row-s; r--"/>
+			<item value="int r=row\+s, c=col\+s; c&gt;col-s; c--"/>
+			<item value="int r=row-s, c=col\+s; r&lt;row\+s; r\+\+"/>
+			<item value="int r=row-s, c=col-s; c&lt;col\+s; c\+\+"/>
 			<item value="next_permutation"/>
+			<item value="go"/>
 			<item value="a"/>
 			<item value="mod"/>
 			<item value="cnt"/>
 			<item value="춧"/>
 			<item value="bfs"/>
 			<item value="long"/>
-			<item value="go"/>
 			<item value="A.length"/>
 			<item value="visit"/>
 			<item value="pos"/>
-			<item value="ans"/>
-			<item value="isPrime"/>
-			<item value="arr"/>
-			<item value="int"/>
 		</list>
 		<list key="replacehistory">
 			<item value="check"/>

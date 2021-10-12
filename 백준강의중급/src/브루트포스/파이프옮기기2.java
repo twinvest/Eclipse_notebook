@@ -1,8 +1,7 @@
-package day0726;
+package 브루트포스;
 
 import java.util.Scanner;
-
-public class 파이프옮기기1 {
+public class 파이프옮기기2 {
 	static int[][] map;
 	static long[][][] dp;
 	static int N;
@@ -38,12 +37,12 @@ public class 파이프옮기기1 {
 		if(y1 == y2) {
 			if(x2+1 >=0 && x2+1 <N) {
 				if(map[y2][x2+1] == 0) {
-					ans += dfs(y1,x1+1,y2,x2+1,0); //가로에서 가로
+					ans += dfs(y1,x1+1,y2,x2+1,0);
 				}
 			}
 			if(x2+1 >=0 && x2+1 <N && y2+1 >=0 && y2+1 <N) {
 				if(map[y2][x2+1] == 0 && map[y2+1][x2+1] == 0 && map[y2+1][x2] == 0) {
-					ans += dfs(y1,x1+1,y2+1,x2+1,2); //가로에서 대각선
+					ans += dfs(y1,x1+1,y2+1,x2+1,2);
 				}
 			}
 		}
@@ -51,12 +50,12 @@ public class 파이프옮기기1 {
 		else if(x1 == x2) {
 			if(y2+1 >=0 && y2+1 <N) {
 				if(map[y2+1][x2] == 0) {
-					ans += dfs(y1+1,x1,y2+1,x2,1); //세로에서 세로
+					ans += dfs(y1+1,x1,y2+1,x2,1);
 				}
 			}
 			if(y2+1 >=0 && y2+1 <N && x2+1 >=0 && x2+1 <N) {
 				if(map[y2][x2+1] == 0 && map[y2+1][x2+1] == 0 && map[y2+1][x2] == 0) {
-					ans += dfs(y1+1,x1,y2+1,x2+1,2); //세로에서 대각선
+					ans += dfs(y1+1,x1,y2+1,x2+1,2);
 				}
 			}
 
@@ -65,17 +64,17 @@ public class 파이프옮기기1 {
 		else {
 			if(x2+1 >=0 && x2+1 <N) {
 				if(map[y2][x2+1] == 0) {
-					ans += dfs(y1+1,x1+1,y2,x2+1,0); //대각선에서 가로
+					ans += dfs(y1+1,x1+1,y2,x2+1,0);
 				}
 			}
 			if(y2+1 >=0 && y2+1 <N) {
 				if(map[y2+1][x2] == 0) {
-					ans += dfs(y1+1,x1+1,y2+1,x2,1); //대각선에서 세로
+					ans += dfs(y1+1,x1+1,y2+1,x2,1);
 				}
 			}
 			if(y2+1 >=0 && y2+1 <N && x2+1 >=0 && x2+1 <N) {
 				if(map[y2][x2+1] == 0 && map[y2+1][x2+1] == 0 && map[y2+1][x2] == 0) {
-					ans += dfs(y1+1,x1+1,y2+1,x2+1,2); //대각선에서 대각선
+					ans += dfs(y1+1,x1+1,y2+1,x2+1,2);
 				}
 			}
 		}

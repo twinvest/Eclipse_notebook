@@ -51,7 +51,6 @@ public class 파이프옮기기1 {
 					ans += dfs(y1+1,x1,y2+1,x2+1);
 				}
 			}
-
 		}
 		//대각선
 		else {

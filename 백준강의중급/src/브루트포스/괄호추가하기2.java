@@ -1,18 +1,20 @@
-package day0803;
+package 브루트포스;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-class Term {
-    int num, op;
-    Term(int num, int op) {
-        this.num = num;
-        this.op = op; //0 : 숫자
-                      //1 : +
-        			  //2 : -
-                      //3 : *
-    }
-}
+
 public class 괄호추가하기2 {
+	static class Term {
+	    int num, op;
+	    Term(int num, int op) {
+	        this.num = num;
+	        this.op = op; //0 : 숫자
+	                      //1 : +
+	        			  //2 : -
+	                      //3 : *
+	    }
+	}
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
