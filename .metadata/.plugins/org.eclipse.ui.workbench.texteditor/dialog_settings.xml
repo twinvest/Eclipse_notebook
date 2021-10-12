@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="check"/>
+		<item key="selection" value="next_permutation"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="next_permutation"/>
 			<item value="a"/>
 			<item value="mod"/>
 			<item value="cnt"/>
@@ -22,7 +23,6 @@
 			<item value="isPrime"/>
 			<item value="arr"/>
 			<item value="int"/>
-			<item value="for"/>
 		</list>
 		<list key="replacehistory">
 			<item value="check"/>

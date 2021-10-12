@@ -1,4 +1,4 @@
-package day0801;
+package 브루트포스;
 
 import java.util.Scanner;
 public class 테트리스 {

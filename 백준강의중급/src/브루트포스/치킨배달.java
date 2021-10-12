@@ -1,8 +1,9 @@
-package day0801;
+package 브루트포스;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+
 class Pair {
     int first;
     int second;
@@ -11,6 +12,7 @@ class Pair {
         this.second = second;
     }
 }
+
 public class 치킨배달 {
     static boolean next_permutation(int[] a) {
         int i = a.length-1;
@@ -49,7 +51,6 @@ public class 치킨배달 {
         int[][] a = new int[n][n];
         ArrayList<Pair> people = new ArrayList<>(); //집
         ArrayList<Pair> store = new ArrayList<>();  //치킨집
-
         for (int i=0; i<n; i++) {
             for (int j=0; j<n; j++) {
                 a[i][j] = sc.nextInt();
@@ -60,7 +61,6 @@ public class 치킨배달 {
                 }
             }
         }
-
         int[] d = new int[store.size()];
         //첫순열, 치킨집의 개수 중 m개를 선택한거임.
         for (int i=0; i<m; i++) {
