@@ -1,4 +1,4 @@
-package day0804;
+package 브루트포스;
 
 import java.util.Scanner;
 
