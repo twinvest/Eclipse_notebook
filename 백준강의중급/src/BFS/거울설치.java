@@ -19,15 +19,15 @@ public class 거울설치 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String[] s = new String[n];
+        String[] map = new String[n];
         int[][] b = new int[n][n]; //거울에 번호를 매겨준다. b[i][j] = 2 ==> i,j번위치의 2번 거울.
         ArrayList<Pair> v = new ArrayList<>();
         int start=-1, end=-1;
         for (int i=0; i<n; i++) {
-            s[i] = sc.next(); //s에 맵을 입력받음.
+        	map[i] = sc.next(); //맵을 입력받음.
 
             for (int j=0; j<n; j++) {
-                char ch = s[i].charAt(j);
+                char ch = map[i].charAt(j);
                 //문도 거울처럼 번호를 매겨준다.
                 if (ch == '#') {
                 	//첫번째 문
@@ -46,21 +46,22 @@ public class 거울설치 {
                 }
             }
         }
+
         int m = v.size();
         boolean[][] a = new boolean[m][m]; //a[i][j] ==> i번 거울에서 j번 거울로 이동할 수 있는지 이동할 수 있으면 true
         for (int i=0; i<v.size(); i++) {
             for (int k=0; k<4; k++) {
-                int x = v.get(i).x + dx[k];
-                int y = v.get(i).y + dy[k];
-                while (0 <= x && x < n && 0 <= y && y < n) {
-                    char ch = s[x].charAt(y);
+                int nx = v.get(i).x + dx[k];
+                int ny = v.get(i).y + dy[k];
+                while (0 <= nx && nx < n && 0 <= ny && ny < n) {
+                    char ch = map[nx].charAt(ny);
                     if (ch == '*') break;
                     //거울이나 문이 있으면 true
                     if (ch == '!' || ch == '#') {
-                        a[i][b[x][y]] = true;
+                        a[i][b[nx][ny]] = true;
                     }
-                    x += dx[k];
-                    y += dy[k];
+                    nx += dx[k];
+                    ny += dy[k];
                 }
             }
         }
