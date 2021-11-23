@@ -94,7 +94,7 @@ public class 로봇청소기_4991 {
 				for (int j=0; j<m; j++) {
 					char x = a[i].charAt(j);
 					if (x == 'o') {
-						b.set(0, new Pair(i,j));
+						b.set(0, new Pair(i,j)); //set함수는 원하는 자리에 넣을 수 있다. 즉, 옆 코드에서 0번째에 넣을 수 있다는말.
 					} else if (x == '*') {
 						b.add(new Pair(i,j));
 					}
