@@ -57,8 +57,10 @@ public class 연구소2 {
 		if (idx == N * M) {
 			return;
 		}
+
 		int r = idx / M;
 		int c = idx % M;
+
 		if (map[r][c] == 2) {
 			map[r][c] = -1;
 			solution3(idx + 1, pick + 1);
@@ -74,6 +76,7 @@ public class 연구소2 {
 		boolean[][] visit = new boolean[N][N];
 		for(int i =0; i<N; ++i) {
 			for(int  j=0; j<N; ++j) {
+				//-1이란건 실제로 바이러스를 놓은거임.
 				if(map[i][j] == -1) {
 					q.add(new Pos(i,j,0));
 					visit[i][j] = true;
@@ -84,10 +87,14 @@ public class 연구소2 {
 		for(int i =0; i<N; ++i) {
 			for(int j =0; j<N; ++j) {
 				copyMap[i][j] = map[i][j];
+				//실제 맵에 바이러스를 놓을 수 있는 곳은
 				if(map[i][j] == 2) {
+					//카피맵에서 빈칸으로 만들어준다.
 					copyMap[i][j] = 0;
 				}
+				//실제 맵에서 벽인 곳은
 				if(map[i][j] == 1) {
+					//카피맵에서는 -2로 표시한다.
 					copyMap[i][j] = -2;
 				}
 			}
@@ -113,11 +120,18 @@ public class 연구소2 {
 
 		if(flag) {
 			if(ans == -1) {
+				/*
+				 * 4 2
+				 * 1 1 1 1
+				 * 1 2 2 1
+				 * 1 1 1 1
+				 * 1 1 1 1
+				 * 위 케이스 같은 경우 놓자마자 0초만에 맵에 전부 퍼진다. 이런 케이스를 처리하기 위해 ans == -1을 체크해주고 그 때 시간초를 0으로 넣어준다.
+				 * */
 				ansList.add(0);
 			}else {
 				ansList.add(ans);
 			}
-
 		}
 
 	}
@@ -125,8 +139,10 @@ public class 연구소2 {
 		int answer = -987654321;
 		for(int i =0; i<N; ++i) {
 			for(int j =0; j<N; ++j) {
+				//빈칸이 하나라도 존재하면 false를 리턴
 				if(copyMap[i][j] == 0)
 					return false;
+
 				if(copyMap[i][j] > answer) {
 					answer = copyMap[i][j];
 				}
