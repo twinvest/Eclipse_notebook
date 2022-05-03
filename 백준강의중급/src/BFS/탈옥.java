@@ -96,6 +96,7 @@ public class 탈옥 {
             }
             int[][] d1 = bfs(a, x1, y1); //죄수1에서 bfs실행
             int[][] d2 = bfs(a, x2, y2); //죄수2에서 bfs실행
+            //print(d0, d1, d2);
             int ans = n*m;
 
             for (int i=0; i<n; i++) {
@@ -112,12 +113,41 @@ public class 탈옥 {
                     //모이는 위치가 문이면 2를 빼준다. 한명만 열면 되니까.
                     if (c == '#')
                     	cur -= 2;
-                    if (ans > cur)
+                    if (ans > cur) {
                     	ans = cur;
+                    	//System.out.println("i : "+i+", j : "+j+", ans : "+ans);
+                    }
+
                 }
             }
             System.out.println(ans);
 
         }
+    }
+
+    static void print(int[][] d1, int[][] d2, int[][] d3) {
+    	for(int i=0; i<d1.length; ++i) {
+    		for(int j=0; j<d1[0].length; ++j) {
+    			System.out.print(d1[i][j]+" ");
+    		}
+    		System.out.println();
+    	}
+    	System.out.println();
+    	for(int i=0; i<d2.length; ++i) {
+    		for(int j=0; j<d2[0].length; ++j) {
+    			System.out.print(d2[i][j]+" ");
+    		}
+    		System.out.println();
+    	}
+    	System.out.println();
+    	for(int i=0; i<d3.length; ++i) {
+    		for(int j=0; j<d3[0].length; ++j) {
+    			System.out.print(d3[i][j]+" ");
+    		}
+    		System.out.println();
+    	}
+
+
+
     }
 }
