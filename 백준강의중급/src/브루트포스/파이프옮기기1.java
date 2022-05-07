@@ -21,6 +21,20 @@ public class 파이프옮기기1 {
 		}
 		long ans = dfs(0,0,0,1,0);
 		System.out.println(ans);
+		/*
+		for(int k =0; k<3; ++k) {
+			for(int i =0; i<N; ++i) {
+				for(int j =0; j<N; ++j) {
+					System.out.print(dp[i][j][k]+" ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+			System.out.println();
+		}
+		*/
+
+
 	}
 
 	static long dfs(int y1, int x1, int y2, int x2, int dir) {
