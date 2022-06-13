@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class 야구공모양ㅋ {
+	static int playerNum = 10;
 	static int N;
     static int[][] players; // N번째 이닝에서 타자의 행동
     static boolean[] select; // 아래 순열에서 사용될 boolean 타입 배열
@@ -60,11 +61,87 @@ public class 야구공모양ㅋ {
         }
     }
 
-    static playBaseBall() {
+    static void playBaseBall() {
+
     	int score = 0;
     	int start_player = 1;
     	int[] Base_state = new int[4];
 
+    	//N이닝 동안 진행
+    	for( int i = 1; i <= N; ++i ) {
+    		int outCnt = 0;
+    		boolean nextIning = false;
+    		for(int k=0; k<4; ++k)
+    			Base_state[k] = 0;
+
+    		while(true) {
+    			for(int j = start_player; j<playerNum; ++j) {
+    				int player = players[i][lineUp[j]];
+
+    				if(player == 0) outCnt++;
+    				else if(player == 1) {
+
+    					for(int F=3; F>=1; F--) {
+    						if(Base_state[F] == 1) {
+    							if(F==3) {
+    								Base_state[F] = 0;
+    								score++;
+    							}else {
+    								Base_state[F+1] = 1;
+    								Base_state[F] = 0;
+    							}
+    						}
+    					}
+    					Base_state[1] = 1;
+
+    				}
+    				else if(player == 2) {
+    					for(int F=3; F>=1; F--) {
+    						if(Base_state[F] == 1) {
+    							if(F==3 || F==2) {
+    								Base_state[F] = 0;
+    								score++;
+    							} else {
+    								Base_state[F+2] = 1;
+    								Base_state[F] = 0;
+    							}
+    						}
+    					}
+    					Base_state[2] = 1;
+    				}
+    				else if(player == 3) {
+    					for(int F=3; F>=1; F--) {
+    						if(Base_state[F] == 1) {
+    							Base_state[F] = 0;
+    							score++;
+    						}
+    					}
+    					Base_state[3] = 1;
+    				}
+    				//홈런
+    				else {
+    					for(int F=1;F<=3; ++F) {
+    						if(Base_state[F] == 1) {
+    							Base_state[F] = 0;
+    							score++;
+    						}
+    					}
+    					score++;
+    				}
+
+    				if(outCnt == 3) {
+    					start_player = j + 1;
+    					if(start_player == playerNum) start_player = 1;
+    					nextIning = true;
+    					break;
+    				}
+    			}
+    			if(nextIning)
+    				break;
+    			start_player = 1;
+    		}
+    	}
+    	ans = Math.max(score, ans);
     }
 
 }
