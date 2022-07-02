@@ -2,7 +2,7 @@ package day1220;
 
 import java.util.Scanner;
 
-public class 왕실의나이트 {
+public class 왕실의나이트_이코테 {
 	public static int[][] dir = {
 			 {1,2}
 			,{-1,2}

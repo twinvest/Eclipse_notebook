@@ -2,7 +2,7 @@ package day0713;
 
 import java.util.Scanner;
 
-public class 금광 {
+public class 금광_이코테 {
 	static int N,M, ans;
 	static int[][] map, dp;
 	public static void main(String[] args) {

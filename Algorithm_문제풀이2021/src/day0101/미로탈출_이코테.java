@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class 미로탈출 {
+public class 미로탈출_이코테 {
 	static class Pos{
 		int y;
 		int x;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class 문자열재정렬 {
+public class 문자열재정렬_이코테 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

@@ -1,7 +1,7 @@
 package day0713;
 import java.util.Scanner;
 
-public class 못생긴수 {
+public class 못생긴수_이코테 {
 
     static int n;
     static int[] ugly = new int[1000]; // 못생긴 수를 담기 위한 테이블 (1차원 DP 테이블)

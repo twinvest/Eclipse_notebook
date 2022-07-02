@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class 무지의먹방라이브_효율성 {
+public class 무지의먹방라이브_이코테 {
 	class Food {
 		int time;
 		int idx;
@@ -34,7 +34,7 @@ public class 무지의먹방라이브_효율성 {
 
 	public static void main(String[] args) {
 		int[] arr = { 8,6,4 };
-		무지의먹방라이브_효율성 func = new 무지의먹방라이브_효율성();
+		무지의먹방라이브_이코테 func = new 무지의먹방라이브_이코테();
 		int ans = func.solution(arr, 15);
 		System.out.println(ans);
 

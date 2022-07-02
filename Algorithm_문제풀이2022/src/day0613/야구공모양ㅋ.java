@@ -15,32 +15,32 @@ public class 야구공모양ㅋ {
     static int[] lineUp; // 타순
     static int ans;
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	        StringTokenizer st;
-	        N = Integer.parseInt(br.readLine());
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
+        N = Integer.parseInt(br.readLine());
 
-	        players = new int[N + 1][10];
-	        for (int i = 1; i <= N; i++) {
-	            st = new StringTokenizer(br.readLine());
-	            for (int j = 1; j <= 9; j++) {
-	                players[i][j] = Integer.parseInt(st.nextToken());
-	            }
-	        }
+        players = new int[N + 1][10];
+        for (int i = 1; i <= N; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 1; j <= 9; j++) {
+                players[i][j] = Integer.parseInt(st.nextToken());
+            }
+        }
 
-	        select = new boolean[10];
-	        lineUp = new int[10];
+        select = new boolean[10];
+        lineUp = new int[10];
 
-	        select[4] = true; // 4번 타자는 1번으로 고정되어있음.
-	        lineUp[4] = 1;
+        select[4] = true; // 4번 타자는 1번으로 고정되어있음.
+        lineUp[4] = 1;
 
-	        ans = 0;
-	        perm(2);
+        ans = 0;
+        perm(2);
 
-	        bw.write(ans + "\n");
-	        bw.flush();
-	        bw.close();
-	        br.close();
+        bw.write(ans + "\n");
+        bw.flush();
+        bw.close();
+        br.close();
 	}
 
 	// 순열
@@ -78,7 +78,9 @@ public class 야구공모양ㅋ {
     			for(int j = start_player; j<playerNum; ++j) {
     				int player = players[i][lineUp[j]];
 
+    				//아웃
     				if(player == 0) outCnt++;
+    				//안타
     				else if(player == 1) {
 
     					for(int F=3; F>=1; F--) {
@@ -86,7 +88,7 @@ public class 야구공모양ㅋ {
     							if(F==3) {
     								Base_state[F] = 0;
     								score++;
-    							}else {
+    							} else {
     								Base_state[F+1] = 1;
     								Base_state[F] = 0;
     							}
@@ -95,6 +97,7 @@ public class 야구공모양ㅋ {
     					Base_state[1] = 1;
 
     				}
+    				//2루타
     				else if(player == 2) {
     					for(int F=3; F>=1; F--) {
     						if(Base_state[F] == 1) {
@@ -109,6 +112,7 @@ public class 야구공모양ㅋ {
     					}
     					Base_state[2] = 1;
     				}
+    				//3루타
     				else if(player == 3) {
     					for(int F=3; F>=1; F--) {
     						if(Base_state[F] == 1) {

@@ -16,7 +16,7 @@ class Pos{
 	}
 }
 
-public class Åä¸¶Åä {
+public class í† ë§ˆí† _7569 {
 	static boolean inside(int y1, int x1, int z1)
 	{
 		return (y1 < Y && y1 >= 0) && (x1 < X && x1 >= 0) && (z1 < Z && z1 >= 0);
@@ -33,10 +33,10 @@ public class Åä¸¶Åä {
 		X =scan.nextInt();
 		Y =scan.nextInt();
 		Z =scan.nextInt();
-		
+
 		for (int k = Z - 1; k >= 0; --k)
 		{
-			for (int i = 0; i < Y; i++) //ÀÔ·Â
+			for (int i = 0; i < Y; i++) //ï¿½Ô·ï¿½
 			{
 				for (int j = 0; j < X; j++)
 				{
@@ -48,23 +48,23 @@ public class Åä¸¶Åä {
 				}
 			}
 		}
-		
+
 		do
 		{
 			check = 0;
 			bfs(day);
 			day++;
 		} while (check != 0 ? true : false);
-		
+
 		for (int z = 0; z < Z; z++)
 			for (int y = 0; y < Y; y++)
 				for (int x = 0; x < X; x++)
 					if (arr[z][y][x] == 0)
 						day = 1;
-		
+
 		System.out.println(day-2);
 	}
-	
+
 	static void bfs(int day)
 	{
 		int size = q.size();
@@ -83,10 +83,10 @@ public class Åä¸¶Åä {
 				ny = y1 + dir[d][0];
 				nx = x1 + dir[d][1];
 
-				//¹üÀ§¾ÈÀÌ¸é¼­ ¹æ¹®ÇÒ°÷ÀÌ 0ÀÌ¸é
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸é¼­ ï¿½æ¹®ï¿½Ò°ï¿½ï¿½ï¿½ 0ï¿½Ì¸ï¿½
 				if (inside(ny, nx, nz) && arr[nz][ny][nx] == 0)
 				{
-					arr[nz][ny][nx] = day + 1;//¹æ¹®
+					arr[nz][ny][nx] = day + 1;//ï¿½æ¹®
 					q.offer(new Pos(nz,ny,nx));
 					check++;
 				}

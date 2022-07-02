@@ -19,12 +19,12 @@ class Pos{
 	}
 }
 
-public class ¸»ÀÌµÇ°íÇÂ¿ø¼þÀÌ2 {
+public class ë§ì´ë˜ê³ í”ˆì›ìˆ­ì´2 {
 	static boolean inside(int y, int x)
 	{
 		return (y>=0 && y<H) && (x>=0 && x<W);
 	}
-	static int[][] dir = {{0,1},{0,-1},{1,0},{-1,0},{-2,1},{-1,2},{1,2},{2,1},{2,-1},{1,-2},{-1,-2},{-2,-1}}; //12¹æÅ½»ö
+	static int[][] dir = {{0,1},{0,-1},{1,0},{-1,0},{-2,1},{-1,2},{1,2},{2,1},{2,-1},{1,-2},{-1,-2},{-2,-1}}; //12ï¿½ï¿½Å½ï¿½ï¿½
 	static int H;
 	static int W;
 	static int[][] map;
@@ -49,7 +49,7 @@ public class ¸»ÀÌµÇ°íÇÂ¿ø¼þÀÌ2 {
 		{
 			int nexty = y + dir[d][0];
 			int nextx = x + dir[d][1];
-			//¹üÀ§¸¦ ¹þ¾î³­ °æ¿ì
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³­ ï¿½ï¿½ï¿½
 			if(!inside(nexty, nextx) || map[nexty][nextx] == 1)
 				continue;
 			if(limit == 0 && d>=4)
@@ -93,7 +93,7 @@ public class ¸»ÀÌµÇ°íÇÂ¿ø¼þÀÌ2 {
 		{
 			int nexty = y + dir[d][0];
 			int nextx = x + dir[d][1];
-			//¹üÀ§¸¦ ¹þ¾î³­ °æ¿ì
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³­ ï¿½ï¿½ï¿½
 			if(!inside(nexty, nextx) || map[nexty][nextx] == 1 || visit[limit][nexty][nextx] == true)
 				continue;
 			if(limit == 0 && d>3)

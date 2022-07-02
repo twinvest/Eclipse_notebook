@@ -23,7 +23,7 @@ public class 연결요소의개수 {
 			graph.get(b).add(a);
 		}
 
-		for(int i = 1; i < visit.length; ++i) {
+		for(int i = 1; i <= numOfVertex; ++i) {
 			if(!visit[i]) {
 				dfs(i, graph);
 				++ans;

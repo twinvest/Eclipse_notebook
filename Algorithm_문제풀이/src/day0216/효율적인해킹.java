@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
-public class È¿À²ÀûÀÎÇØÅ·{
+public class íš¨ìœ¨ì ì¸í•´í‚¹{
 	static ArrayList<Integer>[] adj;
 	static boolean[] visit;
 	static int[] ans = new int[10001];
@@ -15,7 +15,7 @@ public class È¿À²ÀûÀÎÇØÅ·{
 
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
-		adj = new ArrayList[N+1]; //ÀÌ·±½ÄÀ¸·Îµµ ¹®¹ı°¡´É
+		adj = new ArrayList[N+1];
 		for(int i = 1; i <= N; i++)
 			adj[i] = new ArrayList<>();
 
@@ -51,11 +51,8 @@ public class È¿À²ÀûÀÎÇØÅ·{
 		visit[node] = true;
 		for(int next_node : adj[node])
 		{
-			//int next_node = adj[node].get(i);
-			//´ÙÀ½°¥ ³ëµå¸¦ ¹æ¹®ÇÏÁö ¾Ê¾ÒÀ¸¸é
 			if(!visit[next_node])
 			{
-				//´ÙÀ½³ëµå¸¦ ¹æ¹®ÇÑ´Ù.
 				dfs(next_node);
 			}
 		}

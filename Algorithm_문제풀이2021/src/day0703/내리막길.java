@@ -36,6 +36,13 @@ public class 내리막길 {
 		}
 
 		int ans = dfs(0,0);
+		for(int i =0; i<M; ++i) {
+			for(int j =0; j<N; ++j) {
+				System.out.print(dp[i][j]);
+			}
+			System.out.println();
+		}
+
 		bw.write(ans+"\n");
 		bw.flush();
 	}

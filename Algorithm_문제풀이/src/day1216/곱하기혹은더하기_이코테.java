@@ -2,7 +2,7 @@ package day1216;
 
 import java.util.Scanner;
 
-public class 곱하기혹은더하기 {
+public class 곱하기혹은더하기_이코테 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

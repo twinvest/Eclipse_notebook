@@ -1,7 +1,6 @@
 package 브루트포스;
-
+//https://dawninthemoon.tistory.com/72 이 블로그의 코드말고 그림을 볼것.
 import java.util.Scanner;
-
 public class 삼각형의값 {
 	static int[][] a = new int[401][801];
 	static int[][] s = new int[401][801];
@@ -20,7 +19,7 @@ public class 삼각형의값 {
 			}
 			for(int i =1; i<=N; ++i) {
 				for(int j = 1; j<=2*i-1; ++j) {
-					calc(i,j,j,0);
+						calc(i,j,j,0);
 				}
 			}
 			System.out.println(tc+". "+ans);

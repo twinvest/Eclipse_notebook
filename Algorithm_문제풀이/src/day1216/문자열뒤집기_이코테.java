@@ -2,7 +2,7 @@ package day1216;
 
 import java.util.Scanner;
 
-public class 뒤집기 {
+public class 문자열뒤집기_이코테 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

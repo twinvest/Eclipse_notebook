@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class 조합 {
+public class 조합_2407 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

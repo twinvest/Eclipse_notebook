@@ -24,6 +24,7 @@ public class 암호만들기 {
 		list.add("a"); list.add("e"); list.add("i"); list.add("o"); list.add("u");
 		search(0,0);
 	}
+
 	static void search(int idx, int s_idx) {
 		if(sel.length == s_idx) {
 			int mCount = 0; //모음카운트

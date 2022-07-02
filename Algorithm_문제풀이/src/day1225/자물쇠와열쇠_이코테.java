@@ -2,7 +2,7 @@ package day1225;
 
 import java.util.Scanner;
 
-public class 자물쇠와열쇠 {
+public class 자물쇠와열쇠_이코테 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class 자물쇠와열쇠 {
 			}
 		}
 
-		자물쇠와열쇠 main = new 자물쇠와열쇠();
+		자물쇠와열쇠_이코테 main = new 자물쇠와열쇠_이코테();
 		boolean ans = main.Solution(key, lock);
 		System.out.println(ans);
 	}

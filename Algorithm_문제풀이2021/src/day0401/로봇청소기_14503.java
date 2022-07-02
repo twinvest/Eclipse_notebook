@@ -2,7 +2,7 @@ package day0401;
 
 import java.util.Scanner;
 
-public class 로봇청소기 {
+public class 로봇청소기_14503 {
 	static class Pos{
 		int y;
 		int x;

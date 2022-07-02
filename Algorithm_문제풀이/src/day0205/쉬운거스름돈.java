@@ -2,9 +2,9 @@ package day0205;
 
 import java.util.Scanner;
 
-public class ½¬¿î°Å½º¸§µ· {
+public class ì‰¬ìš´ê±°ìŠ¤ë¦„ëˆ {
 	static int[] arr = {50000,10000,5000,1000,500,100,50,10};
-	
+
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class ½¬¿î°Å½º¸§µ· {
 				if(num != 0)
 				{
 					num += arr[i];
-					--count[i];	
+					--count[i];
 				}
 			}
 			System.out.println("#"+t);

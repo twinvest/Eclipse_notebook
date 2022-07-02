@@ -1,6 +1,6 @@
 package day1210;
 
-public class 거스름돈 {
+public class 거스름돈_이코테 {
 	public static void main(String[] args) {
 		int n = 1260;
 		int mok  = 0;

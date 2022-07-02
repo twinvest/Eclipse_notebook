@@ -2,7 +2,7 @@ package day1213;
 
 import java.util.Scanner;
 
-public class 동전0백준 {
+public class 동전0_백준 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

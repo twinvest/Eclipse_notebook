@@ -3,7 +3,7 @@ package day0201;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-public class 위에서아래로 {
+public class 위에서아래로_이코테 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

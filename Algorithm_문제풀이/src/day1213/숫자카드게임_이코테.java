@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class 숫자카드게임 {
+public class 숫자카드게임_이코테 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

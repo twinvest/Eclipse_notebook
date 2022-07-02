@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class 부품찾기 {
+public class 부품찾기_이코테 {
 
 	static ArrayList<Integer> list = new ArrayList<>();
 	public static void main(String[] args) {

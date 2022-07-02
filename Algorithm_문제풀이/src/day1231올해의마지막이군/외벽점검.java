@@ -12,8 +12,10 @@ public class 외벽점검 {
 
     public static void main(String[] args) {
         int n = 12;
-        int[] weak = {1, 3, 4, 9,10};
-        int[] dist = {3,5,7};
+        //int[] weak = {1, 3, 4, 9,10};
+        //int[] dist = {3,5,7};
+        int[] weak = {1,2,3};
+        int[] dist = {1};
 
         int answer = solution(n, weak, dist);
         System.out.println(answer);

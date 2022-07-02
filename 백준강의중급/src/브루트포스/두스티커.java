@@ -1,7 +1,6 @@
 package 브루트포스;
-
 import java.util.Scanner;
-
+//https://yabmoons.tistory.com/278 참고하면 좋은 블로그
 public class 두스티커 {
 	static int H,W,N,ans;
 	static int[] r,c;

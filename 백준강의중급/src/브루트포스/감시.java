@@ -26,6 +26,7 @@ public class 감시 {
             j += dy[dir];
         }
     }
+
     static int go(int[][] a, ArrayList<CCTV> cctv, int index) {
         if (index == cctv.size()) { //모든 CCTV의 방향을 결정하면 이 if문에 진입한다.
             int n = a.length, m = a[0].length;

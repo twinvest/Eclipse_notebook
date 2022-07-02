@@ -8,7 +8,7 @@ import java.util.Scanner;
  * 구간합 이분탐색으로도 풀 수 있음.
  * https://codecollector.tistory.com/752
  * */
-public class 우체국 {
+public class 우체국_2141 {
 	static class Pos implements Comparable<Pos>{
 		long idx;
 		long numOfPeople;

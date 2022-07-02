@@ -2,12 +2,12 @@ package day0210;
 
 import java.util.Scanner;
 
-public class ¸»ÀÌµÇ°íÇÂ¿ø¼þÀÌ {
+public class ë§ì´ë˜ê³ í”ˆì›ìˆ­ì´ {
 	static boolean inside(int y, int x)
 	{
 		return (y>=0 && y<H) && (x>=0 && x<W);
 	}
-	static int[][] dir = {{0,1},{0,-1},{1,0},{-1,0},{-2,1},{-1,2},{1,2},{2,1},{2,-1},{1,-2},{-1,-2},{-2,-1}}; //12¹æÅ½»ö
+	static int[][] dir = {{0,1},{0,-1},{1,0},{-1,0},{-2,1},{-1,2},{1,2},{2,1},{2,-1},{1,-2},{-1,-2},{-2,-1}}; //12ï¿½ï¿½Å½ï¿½ï¿½
 	static int H;
 	static int W;
 	static int[][] map;
@@ -24,7 +24,7 @@ public class ¸»ÀÌµÇ°íÇÂ¿ø¼þÀÌ {
 		System.out.println(ans);
 	}
 
-	//limitÀº 0ÀÌµÇ¸é ´õÀÌ»ó ¸ø¾¸.
+	//limitï¿½ï¿½ 0ï¿½ÌµÇ¸ï¿½ ï¿½ï¿½ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½.
 	static int dfs(int y, int x, int depth, int limit)
 	{
 		int depth1 = 0;
@@ -36,13 +36,13 @@ public class ¸»ÀÌµÇ°íÇÂ¿ø¼þÀÌ {
 			int nexty = y + dir[d][0];
 			int nextx = x + dir[d][1];
 
-			//¹üÀ§¸¦ ¹þ¾î³­ °æ¿ì
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³­ ï¿½ï¿½ï¿½
 			if(!inside(nexty, nextx))
 				continue;
-			//¸»Ã³·³ ¿òÁ÷ÀÌÁö ¸øÇÏ´Â °æ¿ì
+			//ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½
 			if(limit == 0 && d>3)
 				continue;
-			//´ÙÀ½°¡º¼°÷ÀÎµ¥ ±×°÷ÀÌ Àå¾Ö¹°ÀÌ¸é ÄÁÆ¼´º
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îµï¿½ ï¿½×°ï¿½ï¿½ï¿½ ï¿½ï¿½Ö¹ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½
 			if(map[nexty][nextx] == 1)
 				continue;
 			if(d<4)

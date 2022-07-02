@@ -6,7 +6,7 @@ package day0714;
 
 import java.util.Scanner;
 
-public class 편집거리 {
+public class 편집거리_이코테 {
 	static int[][] dp;
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

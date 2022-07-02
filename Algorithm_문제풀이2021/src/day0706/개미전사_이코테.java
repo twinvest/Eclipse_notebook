@@ -2,7 +2,7 @@ package day0706;
 
 import java.util.Scanner;
 
-public class 개미전사 {
+public class 개미전사_이코테 {
 	 // 앞서 계산된 결과를 저장하기 위한 DP 테이블 초기화
     public static int[] d = new int[100];
 	public static void main(String[] args) {

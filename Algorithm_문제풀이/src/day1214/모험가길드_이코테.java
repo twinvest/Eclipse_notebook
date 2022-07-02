@@ -3,7 +3,7 @@ package day1214;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class 모험가길드 {
+public class 모험가길드_이코테 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

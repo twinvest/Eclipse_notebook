@@ -55,7 +55,7 @@ public class 로봇청소기_4991 {
 		}
 		Queue<Pair> q = new LinkedList<Pair>();
 		q.add(new Pair(sx,sy));
-		dist[sx][sy] = 0;
+		dist[sx][sy] = 0;          //방문처리
 		while (!q.isEmpty()) {
 			Pair p = q.remove();
 			int x = p.first;
@@ -94,7 +94,7 @@ public class 로봇청소기_4991 {
 				for (int j=0; j<m; j++) {
 					char x = a[i].charAt(j);
 					if (x == 'o') {
-						b.set(0, new Pair(i,j)); //set함수는 원하는 자리에 넣을 수 있다. 즉, 옆 코드에서 0번째에 넣을 수 있다는말.
+						b.set(0, new Pair(i,j)); //set함수는 해당 인덱스에 원하는 값으로 대체가 가능하다. 즉, 0번인덱스의 값을 new Pair(i,j)로 대체하겠다는 뜻.
 					} else if (x == '*') {
 						b.add(new Pair(i,j));
 					}
@@ -107,7 +107,7 @@ public class 로봇청소기_4991 {
 			for (int i=0; i<l; i++) {
 				//(0,0)부터 로봇청소기위치, 더러운곳의 위치 순차적으로 dist를 구함.
 				int[][] dist = bfs(a, b.get(i).first, b.get(i).second);
-				//print(dist);
+				print(dist);
 				for (int j=0; j<l; j++) {
 					d[i][j] = dist[b.get(j).first][b.get(j).second];
 					//print(d);

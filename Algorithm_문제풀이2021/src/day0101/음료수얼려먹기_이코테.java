@@ -2,7 +2,7 @@ package day0101;
 
 import java.util.Scanner;
 
-public class 음료수얼려먹기 {
+public class 음료수얼려먹기_이코테 {
 	static boolean inside(int y, int x) {
 		return (y>=0 && y<N) && (x>=0 && x<M);
 	}

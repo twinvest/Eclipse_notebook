@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class 성적이낮은순으로학생출력하기 {
+public class 성적이낮은순으로학생출력하기_이코테 {
 	static class Student implements Comparable<Student> {
 		String name;
 		int score;

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class 보석도둑 {
+public class 보석도둑_1202 {
 	static class Diamond implements Comparable<Diamond>{
 		int weight;
 		int price;

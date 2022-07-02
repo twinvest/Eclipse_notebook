@@ -3,7 +3,7 @@ package day1216;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class 만들수없는금액 {
+public class 만들수없는금액_이코테 {
 	static int N;
 	static int[] coins;
 	public static void main(String[] args) {

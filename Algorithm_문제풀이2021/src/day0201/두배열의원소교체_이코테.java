@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class 두배열의원소교체 {
+public class 두배열의원소교체_이코테 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

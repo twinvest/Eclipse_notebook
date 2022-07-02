@@ -2,7 +2,7 @@ package day1213;
 
 import java.util.Scanner;
 
-public class 일이될때까지 {
+public class 일이될때까지_이코테 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

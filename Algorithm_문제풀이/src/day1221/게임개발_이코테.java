@@ -2,7 +2,7 @@ package day1221;
 
 import java.util.Scanner;
 
-public class 게임개발 {
+public class 게임개발_이코테 {
 
 	static int[][] dir = {
 			 {-1,0}  //북

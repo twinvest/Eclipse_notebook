@@ -11,8 +11,8 @@ public class 이차원배열조합 {
 		// TODO Auto-generated method stub
 		int[][] map = new int[4][3];
 		//solution1(map);
-		//solution2(map,0,0);
-		solution3(map,0,0);
+		solution2(map,0,0);
+		//solution3(map,0,0);
 	}
 	static int cnt = 0;
 	static void solution1(int[][] map) {

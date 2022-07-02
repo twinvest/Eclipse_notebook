@@ -2,7 +2,7 @@ package day1217;
 
 import java.util.Scanner;
 
-public class 볼링공고르기_조합버전 {
+public class 볼링공고르기_조합버전_이코테 {
 
 
 		static int[] arr;

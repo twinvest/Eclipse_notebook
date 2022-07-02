@@ -2,7 +2,7 @@ package day1222;
 
 import java.util.Scanner;
 
-public class 럭키스트레이트 {
+public class 럭키스트레이트_이코테 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

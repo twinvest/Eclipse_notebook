@@ -2,7 +2,7 @@ package day0219;
 
 import java.util.Scanner;
 
-public class N°úM1 {
+public class Nê³¼M1 {
 	static int[] result;
 	static boolean[] visited;
 	static int N;

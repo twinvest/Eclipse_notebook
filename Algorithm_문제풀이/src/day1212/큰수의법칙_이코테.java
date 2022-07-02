@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class 큰수의법칙 {
+public class 큰수의법칙_이코테 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

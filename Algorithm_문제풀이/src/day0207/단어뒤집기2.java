@@ -3,7 +3,7 @@ package day0207;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class ´Ü¾îµÚÁý±â2 {
+public class ë‹¨ì–´ë’¤ì§‘ê¸°2 {
 
 	public static void main(String[] args) {
 		Stack<Character> s = new Stack<>();

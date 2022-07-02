@@ -2,7 +2,7 @@ package day0422;
 
 import java.util.Scanner;
 
-public class 종이접기 {
+public class 종이접기_1802 {
 	static String str = "";
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

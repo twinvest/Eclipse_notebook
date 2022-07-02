@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Çà·ÄÃ£±â {
+public class í–‰ë ¬ì°¾ê¸° {
 	static class Pos
 	{
 		int y;
@@ -73,7 +73,7 @@ public class Çà·ÄÃ£±â {
 						int finaly = maxy-i+1;
 						int finalx = maxx-j+1;
 						list2.add(new Pos(finaly, finalx, finalx*finaly));
-						//System.out.println("³¡");
+						//System.out.println("ï¿½ï¿½");
 
 					}
 				}

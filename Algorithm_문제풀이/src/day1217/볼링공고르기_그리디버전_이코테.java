@@ -3,7 +3,7 @@ package day1217;
 import java.util.Scanner;
 
 //못풀었음
-public class 볼링공고르기_그리디버전 {
+public class 볼링공고르기_그리디버전_이코테 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

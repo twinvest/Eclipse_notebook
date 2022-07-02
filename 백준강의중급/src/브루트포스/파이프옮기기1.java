@@ -21,7 +21,7 @@ public class 파이프옮기기1 {
 		}
 		long ans = dfs(0,0,0,1,0);
 		System.out.println(ans);
-		/*
+
 		for(int k =0; k<3; ++k) {
 			for(int i =0; i<N; ++i) {
 				for(int j =0; j<N; ++j) {
@@ -32,7 +32,7 @@ public class 파이프옮기기1 {
 			System.out.println();
 			System.out.println();
 		}
-		*/
+
 
 
 	}

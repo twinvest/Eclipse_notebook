@@ -10,7 +10,9 @@ public class 로마숫자만들기 {
  * 이때 I,V,X,의 개수를 알고 있다면, L의 개수도 알 수 있기때문에 N^3까지도 줄일 수 있다.
  *
  * */
-
+/*
+ * https://subin-programming.tistory.com/292     for문이 아닌 재귀로 푼 좋은 코드
+ * */
 
 	//L이 20번 나오는 경우 1000이 최대이기때문에 배열 크기를 다음과 같이 선언한다.
 	//check[i] = 수 i를 만들었으면 true. 아니면 false.

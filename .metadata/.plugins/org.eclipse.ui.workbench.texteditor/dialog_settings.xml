@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="q"/>
+		<item key="selection" value="ans"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="ans"/>
+			<item value="targetList"/>
+			<item value="check"/>
+			<item value="CD"/>
+			<item value="AB"/>
+			<item value="long"/>
+			<item value="ArrayList"/>
+			<item value="isCheck"/>
+			<item value="bfs"/>
+			<item value="solution3"/>
 			<item value="q"/>
 			<item value="ok"/>
 			<item value="deque"/>
 			<item value="d0"/>
 			<item value="calc"/>
-			<item value="start"/>
-			<item value="go"/>
-			<item value="bfs"/>
-			<item value="int r=row\+s, c=col-s; r&gt;row-s; r--"/>
-			<item value="int r=row\+s, c=col\+s; c&gt;col-s; c--"/>
-			<item value="int r=row-s, c=col\+s; r&lt;row\+s; r\+\+"/>
-			<item value="int r=row-s, c=col-s; c&lt;col\+s; c\+\+"/>
-			<item value="next_permutation"/>
-			<item value="a"/>
-			<item value="mod"/>
 		</list>
 		<list key="replacehistory">
+			<item value="second"/>
+			<item value="first"/>
 			<item value="check"/>
 			<item value="N"/>
 			<item value="dp"/>

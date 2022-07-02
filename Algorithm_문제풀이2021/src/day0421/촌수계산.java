@@ -1,5 +1,5 @@
 package day0421;
-
+/*https://loosie.tistory.com/165 여기 블로그 코드 참고*/
 import java.util.ArrayList;
 import java.util.Scanner;
 public class 촌수계산 {

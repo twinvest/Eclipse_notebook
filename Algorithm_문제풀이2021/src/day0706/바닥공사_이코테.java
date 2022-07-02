@@ -2,7 +2,7 @@ package day0706;
 
 import java.util.Scanner;
 
-public class 바닥공사 {
+public class 바닥공사_이코테 {
 	static int[] dp = new int[1001];
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
