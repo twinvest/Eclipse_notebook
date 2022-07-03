@@ -81,6 +81,7 @@ public class 기둥과보설치 {
 		}
 		*/
 	}
+
 	boolean existPillar(ArrayList<Pos> list, int x, int y){
 		if(!list.contains(new Pos(x,y,0))){
 			return false;
@@ -92,6 +93,7 @@ public class 기둥과보설치 {
 		if(!list.contains(new Pos(x,y,1))){
 			return false;
 		}
+
 		return true;
 	}
 
@@ -151,7 +153,7 @@ public class 기둥과보설치 {
 		return false;
 	}
 
-	//기둥삭제체크. 삭제가능하면 true반환.
+		//기둥삭제체크. 삭제가능하면 true반환.
 	public boolean check3(ArrayList<Pos> list, int x, int y, int n) {
 		if((existPillar(list, x, y+1) && !check1(list, x, y+1, n))
 			|| (existBeam(list, x, y+1) && !check2(list, x, y+1, n))
@@ -162,10 +164,10 @@ public class 기둥과보설치 {
 	}
 
 	public boolean check4(ArrayList<Pos> list, int x, int y, int n) {
-		if(existPillar(list, x, y) && !check1(list, x, y, n)
-				|| existPillar(list, x+1, y) && !check1(list, x+1, y, n)
-				|| existBeam(list, x+1, y) && !check2(list, x+1, y, n)
-				|| existBeam(list, x-1, y) && !check2(list, x-1, y, n)) {
+		if((existPillar(list, x, y) && !check1(list, x, y, n))
+				|| (existPillar(list, x+1, y) && !check1(list, x+1, y, n))
+				|| (existBeam(list, x+1, y) && !check2(list, x+1, y, n))
+				|| (existBeam(list, x-1, y) && !check2(list, x-1, y, n))) {
 				return false;
 			}
 			return true;
@@ -194,7 +196,7 @@ public class 기둥과보설치 {
 					//일단 하나를 삭제한다.
 					structure.remove(new Pos(build_frame[i][0], build_frame[i][1], build_frame[i][2]));
 					//check3을 통해 삭제가 가능한지 알아본다. 만약 삭제가가능하면 true를 삭제가 불가능하면 false를 뱉는다.
-					if(!check3(structure,build_frame[i][1], build_frame[i][2], n)) {
+					if(!check3(structure,build_frame[i][0], build_frame[i][1], n)) {
 						structure.add(new Pos(build_frame[i][0], build_frame[i][1], build_frame[i][2]));
 					}
 				}
@@ -203,7 +205,7 @@ public class 기둥과보설치 {
 					//일단 하나를 삭제한다.
 					structure.remove(new Pos(build_frame[i][0], build_frame[i][1], build_frame[i][2]));
 					//check3을 통해 삭제가 가능한지 알아본다. 만약 삭제가가능하면 true를 삭제가 불가능하면 false를 뱉는다.
-					if(!check4(structure,build_frame[i][1], build_frame[i][2], n)) {
+					if(!check4(structure,build_frame[i][0], build_frame[i][1], n)) {
 						structure.add(new Pos(build_frame[i][0], build_frame[i][1], build_frame[i][2]));
 					}
 				}
@@ -219,4 +221,5 @@ public class 기둥과보설치 {
 		}
 		return ans;
 	}
+
 }
