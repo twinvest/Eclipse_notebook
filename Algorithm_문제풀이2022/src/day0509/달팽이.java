@@ -18,26 +18,27 @@ public class 달팽이 {
 		int index = 0;
 		map[r][c] = ++index;
 		for(int k = 1; k<=r; ++k) {
+			//위
 			for(int i = r-k, j = c-k+1; j<=c+k; ++j) {
 				map[i][j] = ++index;
-
 			}
 
+			//오른쪽
 			for(int i = r-k+1, j = r+k; i<=r+k; ++i) {
 				map[i][j] = ++index;
-
 			}
 
+			//아래
 			for(int i = r+k, j = c+k-1; j>=c-k; --j) {
 				map[i][j] = ++index;
-
 			}
 
+			//왼쪽
 			for(int i = r+k-1, j = c-k; i>=r-k; --i) {
 				map[i][j] = ++index;
-
 			}
 		}
+
 		StringBuilder sb = new StringBuilder();
 		int ii = 0, jj = 0;
 		for(int i =0; i<N; ++i) {
@@ -51,9 +52,7 @@ public class 달팽이 {
 			sb.append("\n");
 		}
 		sb.append(ii+" "+jj);
-
 		System.out.println(sb.toString());
-
 	}
 
 }
