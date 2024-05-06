@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
+    <libraryInfo home="C:\Program Files\Java\jdk-17" version="17.0.9"/>
     <libraryInfo home="C:\Program Files\Java\jdk-12.0.1" version="12.0.1"/>
+    <libraryInfo home="C:\Users\woori\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre" version="17.0.9"/>
     <libraryInfo home="C:\Program Files\Java\jre1.8.0_221\bin" version="1.8.0_221">
         <bootpath>
             <entry path="C:\Program Files\Java\jre1.8.0_221\lib\resources.jar"/>
@@ -39,4 +41,5 @@
             <entry path="C:\Program Files\Java\jre1.8.0_221\lib\endorsed"/>
         </endorsedDirs>
     </libraryInfo>
+    <libraryInfo home="C:\Users\woori\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858" version="17.0.9"/>
 </libraryInfos>
