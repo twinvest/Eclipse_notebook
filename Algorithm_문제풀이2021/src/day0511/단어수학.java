@@ -21,7 +21,7 @@ public class 단어수학 {
 				int chNum = str.charAt(j) - 'A';
 				if(!type[chNum]) {
 					type[chNum] = true;
-					charList.add(str.charAt(j));
+					charList.add(str.charAt(j)); //A
 				}
 			}
 		}
@@ -52,8 +52,8 @@ public class 단어수학 {
 
 		int[] a = new int[26];
 		for(int i = 0; i<charList.size(); ++i) {
-			char ch = charList.get(i);
-			int numOfCh = permList.get(i);
+			char ch = charList.get(i); //A, B, C
+			int numOfCh = permList.get(i); //9
 			a[ch - 'A'] = numOfCh; //이번 순열에서 해당 알파벳에 선택된 숫자
 		}
 
