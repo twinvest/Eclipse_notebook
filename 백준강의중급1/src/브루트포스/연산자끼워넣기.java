@@ -1,5 +1,4 @@
 package 브루트포스;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
