@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class 벽부수고이동하기3 {
+public class 벽부수고이동하기3_내가푼거실패 {
 
 	static class Pos{
 		int y;
@@ -109,10 +109,10 @@ public class 벽부수고이동하기3 {
 
 				//현재 밤이라면 벽을깰 수 없다.
 				if(map[ny][nx] == '0' && originMap[ny][nx] == '1' && cur.dayAndnight == 1) {
-					q.add(new Pos(ny,nx,cur.distance+2, 1 ));
-					visit[ny][nx] = true;
+					q.add(new Pos(cur.y,cur.x,cur.distance+1, 0 ));
+					visit[cur.y][cur.x] = true;
 				}else if(map[ny][nx] == '0' && originMap[ny][nx] == '1' && cur.dayAndnight == 0) {
-					q.add(new Pos(ny,nx,cur.distance+1, cur.dayAndnight==1 ? 0 : 1 ));
+					q.add(new Pos(ny,nx,cur.distance+1, 1 ));
 					visit[ny][nx] = true;
 				}else if(map[ny][nx] == '0') {
 					q.add(new Pos(ny,nx,cur.distance+1, cur.dayAndnight==1 ? 0 : 1 ));
