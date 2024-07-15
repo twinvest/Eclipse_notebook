@@ -1,4 +1,4 @@
-package day0214;
+package BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 
-public class 아기상어_구글링1 {
+public class 아기상어 {
 
     public static final int max_val = 401, max_int = 21;
     public static int n, shark_x, shark_y, min_dist, min_x, min_y, result, eat_cnt = 0, shark_size = 2;
