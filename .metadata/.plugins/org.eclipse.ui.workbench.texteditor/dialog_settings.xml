@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="isNotPrime"/>
+		<item key="selection" value="stoi"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="stoi"/>
+			<item value="return Integer\.compare\(this\.weight, comp\.weight\)"/>
 			<item value="isNotPrime"/>
 			<item value="pNum"/>
 			<item value="init_check"/>
@@ -15,11 +17,6 @@
 			<item value="target"/>
 			<item value="tar"/>
 			<item value="bw"/>
-			<item value="print"/>
-			<item value="inside"/>
-			<item value="solution3"/>
-			<item value="check_exshape"/>
-			<item value="isout"/>
 		</list>
 		<list key="replacehistory">
 			<item value="second"/>
