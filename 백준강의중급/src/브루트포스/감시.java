@@ -15,6 +15,7 @@ class CCTV {
 public class 감시 {
     static final int[] dx = {0,1,0,-1};
     static final int[] dy = {1,0,-1,0};
+    static int ans = 64;
     static void check(int[][] a, int[][] b, int x, int y, int dir) {
         int n = a.length, m = a[0].length;
         int i = x, j = y;
@@ -71,7 +72,6 @@ public class 감시 {
             return cnt;
         }
         //index번째 CCTV의 방향을 결정하는 부분.
-        int ans = 100;
         for (int i=0; i<4; i++) {
             cctv.get(index).dir = i;
             int temp = go(a, cctv, index+1); //이제 index번째의 CCTV는 방향을 바꿨으니 그 다음 index+1번째 CCTV의 방향을 결정하러 재귀 타고ㄱㄱ
