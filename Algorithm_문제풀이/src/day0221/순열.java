@@ -3,7 +3,7 @@ package day0221;
 import java.util.Arrays;
 
 public class 순열 {
-	static int[] arr = {1,2,3};
+	static int[] arr = {0,0,0,1,1};
 	static int[] result = new int[arr.length];
 	static boolean[] visited = new boolean[arr.length];
 	public static void main(String[] args) {
