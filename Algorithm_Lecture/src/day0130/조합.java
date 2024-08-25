@@ -3,8 +3,8 @@ package day0130;
 import java.util.Arrays;
 
 public class 조합 {
-	static int[] arr = {1,2,3,4,5,7,8,9};
-	static int[] sel = new int[2];
+	static int[] arr = {1,2,3,4,5};
+	static int[] sel = new int[3];
 	public static void main(String[] args) {
 		combination(0, 0);
 	}
